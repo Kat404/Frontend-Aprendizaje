@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!-- ! Doctype: Define el tipo de documento HTML y su versión -->
+<html lang="es">
+  <!-- ! En la etiqueta <html> debe ir todo nuestro código HTML sin excepción -->
+  <!-- * lang: Define el idioma del documento HTML -->
+  <!-- ? Dentro de HTML se divide en 2 grandes partes: el <head> y el <body> -->
+  <head>
+    <!-- ! Contiene información sobre el documento (metadatos, enlaces CSS, etc) -->
+    <title>Mi Portafolio Personal</title>
+    <!-- * <title> es el título que aparecerá en nuestra página en la pestaña del navegador -->
+  </head>
+
+  <body>
+    <!-- * Body: Representa el contenido del documento HTML que se quiera ver y renderizar -->
+    <h1>Portafolio Personal - <em>José Luis</em> Ramírez Sánchez</h1>
+    <p>
+      <!-- * P: Representa un párrafo -->
+      Bienvenido a mi portafolio personal. Aquí encontrarás información sobre
+      mis <strong>proyectos</strong>, habilidades y experiencia profesional.
+    </p>
+    → <a href="https://github.com/Kat404">GitHub</a>
+    <!-- * A: Representa un enlace -->
+    <br />
+    <!-- ? Br: Representa un salto de línea -->
+    → <a href="https://www.reddit.com/user/Kat_404">Reddit</a>
+
+    <h2>Mi Vida</h2>
+    <p>
+      Actualmente soy un estudiante en Ingeniería en Sistemas
+      Computacionales,<br />
+      me gustan mucho los sistemas operativos y me quiero enfocar en el
+      desarrollo frontend.
+      <br />
+    </p>
+    <p>Algunos de mis gustos o aficiones son:</p>
+    <ul>
+      <!-- * Ul: Representa una lista no ordenada -->
+      <li>Sistemas Operativos: Linux (Debian, Fedora, Arch)</li>
+      <!-- * Li: Representa un elemento de lista -->
+      <li>
+        Desarrollo Web (Aprendizaje Temprano): HTML y CSS, con ganas de dominar
+        frameworks como Astro o Tailwind
+      </li>
+      <li>
+        Mejoramiento de la seguridad y privacidad de sistemas y navegadores:
+        AdBlockers, Firewalls, etc.
+      </li>
+    </ul>
+
+    <h3>Mis Proyectos</h3>
+    <ul>
+      <li class="list-item">
+        <!-- * Class: Nos ayuda a darle una clase a un elemento -->
+        <a href="https://github.com/Kat404/linux_security.conf"
+          >Configuración Out-of-the-Box</a
+        >
+        para mejorar la seguridad nativa de Linux mediante System-d
+      </li>
+      <li class="list-item">
+        <a href="https://github.com/Kat404/ZSH-Terminal">ZSH-Terminal</a>: Guía
+        para principiantes usando la liell ZSH
+      </li>
+      <li class="list-item">
+        <a href="https://github.com/Kat404/FISH-Terminal">FISH-Terminal</a>:
+        Guía para principiantes usando la shell FISH
+      </li>
+      <li class="list-item">
+        <a href="https://github.com/Kat404/dotfiles">Dotfiles</a>: Configuración
+        personal para sistemas operativos Linux y demás configuraciones para
+        mucho software que utilizo
+      </li>
+    </ul>
+
+    <h3>Mi primer mascota</h3>
+    <!-- 
+      ! ID: Nos ayuda a darle un nombre único a un elemento
+      * Title: Nos ayuda a darle un nombre a un elemento, aparece cuando pasamos el mouse sobre el elemento
+      ? Alt: Nos ayuda a darle una descripción a un elemento, si la imagen no puede cargar, este texto será el que aparecerá en su lugar
+      ? Src: Nos ayuda a darle la ruta a un elemento
+      Height: Nos ayuda a darle la altura a un elemento
+      Width: Nos ayuda a darle la anchura a un elemento
+    -->
+    <img
+      id="jose-luis-cat"
+      title="Foto del gato de José Luis"
+      alt="Foto de mi gato acostado en su maceta"
+      src="../images/my-cat.jpg"
+      height="200"
+      width="200" />
+  </body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- * Solución del Ejercicio 1: Usar la estructura completa de HTML-->
+    <meta charset="UTF-8" />
+    <!-- ? Especificación para caracteres especiales -->
+    <title>Mis Ejercicios de HTML</title>
+  </head>
+  <body>
+    <h4 id="indice">Índice</h4>
+    <p>
+      <em>El Índice es parte del Ejercicio 5</em>
+    </p>
+    <ul>
+      <li>
+        <a href="#instrucciones-cafe">¿Cómo hacer café?</a>:
+        <em>Ejercicio 2</em>
+      </li>
+      <li>
+        <a href="#horario-clases">Mi Horario de Clases en la Universidad</a>:
+        <em>Ejercicio 3</em>
+      </li>
+      <li>
+        <a href="#form-personal">Formulario Personal</a>: <em>Ejercicio 4</em>
+      </li>
+    </ul>
+
+    <h3 id="instrucciones-cafe">¿Sabes cómo preparar un delicioso café?</h3>
+    <br />
+    <p>¡Veamos cómo hacerlo!</p>
+    <ol>
+      <!-- ? Lista ordenada (mediante números) -->
+      <li>
+        Paso 1: Reunir los ingredientes
+        <ul>
+          <!-- * Se añade una lista desordenada dentro del <li></li> -->
+          <!-- ? Los únicos hijos que pueden tener las listas como <ul> u <ol> son los <li> -->
+          <li>Tu taza de cerámica favorita</li>
+          <li>Agua</li>
+          <li>Un microondas</li>
+          <li>Electricidad</li>
+        </ul>
+      </li>
+      <li>Paso 2: Agregar agua al gusto a la taza</li>
+      <li>
+        Paso 3: Llevar la taza al microondas y calentar durante un tiempo
+        razonable <em>(1-2 minutos)</em>
+      </li>
+      <li>
+        Paso 4: Saca la taza del microondas, luego añade tu café soluble
+        favorito
+      </li>
+      <li>Paso 5: Puedes agregar endulzante y leche al gusto</li>
+      <li>Paso 6: ¡Disfruta de tu nuevo café casero!</li>
+    </ol>
+
+    <!-- Separaciones para los siguiente ejercicios -->
+    <br />
+    <br />
+    <h3 id="horario-clases">Horario de Clases</h3>
+    <a href="#indice">↑</a>
+    <table>
+      <!-- ! Contenedor principal de la tabla -->
+      <tr>
+        <!-- * Table Row: Define una fila horizontal, todo lo que se desee en la misma línea horizontal debe ir dentro del mismo <tr> -->
+        <th><em>Materia</em></th>
+        <!-- * Table Header: Se usa para los títulos de las columnas, suelen estar resaltados en negrita automáticamente -->
+        <th>Lunes</th>
+        <th>Martes</th>
+        <th>Miércoles</th>
+        <th>Jueves</th>
+        <th>Viernes</th>
+      </tr>
+
+      <tr>
+        <!-- ? Se crea otra fila horizontal (mediante <tr>) -->
+        <td>Química</td>
+        <!-- * Table Data: Son las celdas normales con la información -->
+        <td></td>
+        <td></td>
+        <!-- ? Cada  <td> representa su lugar en las columnas -->
+        <td>7:00 - 8:00am</td>
+        <td></td>
+        <td>7:00 - 8:00am</td>
+      </tr>
+      <tr>
+        <td>Ecuaciones Diferenciales</td>
+        <td>9:00 - 10:00am</td>
+        <td>9:00 - 10:00am</td>
+        <td>9:00 - 10:00am</td>
+        <td>9:00 - 10:00am</td>
+        <td>9:00 - 10:00am</td>
+      </tr>
+      <tr>
+        <td>TAP</td>
+        <td>10:00 - 11:00am</td>
+        <td>10:00 - 11:00am</td>
+        <td>10:00 - 11:00am</td>
+        <td>10:00 - 11:00am</td>
+        <td>10:00 - 11:00am</td>
+      </tr>
+      <tr>
+        <td>Desarrollo Sustentable</td>
+        <td>3:00 - 4:00pm</td>
+        <td>3:00 - 4:00pm</td>
+        <td>3:00 - 4:00pm</td>
+        <td>3:00 - 4:00pm</td>
+        <td>3:00 - 4:00pm</td>
+      </tr>
+    </table>
+
+    <!-- ? Separación -->
+    <br />
+    <h3 id="form-personal">Formulario Personal</h3>
+    <!-- ? Ejercicio 4 -->
+    <form>
+      <p>
+        Nombre:
+        <input placeholder="Tu nombre completo" type="text" />
+      </p>
+      <p>Email: <input placeholder="Tu email" type="email" /></p>
+      <p>
+        <input type="submit" />
+      </p>
+    </form>
+  </body>
+</html>
