@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<!-- ! Doctype: Define el tipo de documento HTML y su versión -->
+<html lang="es">
+  <!-- ! En la etiqueta <html> debe ir todo nuestro código HTML sin excepción -->
+  <!-- * Lang: Define el idioma del documento HTML -->
+  <!-- ? Dentro de HTML se divide en 2 grandes partes: el <head> y el <body> -->
+  <head>
+    <!-- ! Contiene información sobre el documento (metadatos, enlaces CSS, etc) -->
+    <title>Portafolio Personal - José Luis - Frontend Developer JR</title>
+    <!-- * Title: Es el título que aparecerá en nuestra página en la pestaña del navegador -->
+    <meta
+      name="description"
+      content="Portafolio de José Luis, un estudiante en Ingeniería en Sistemas Computacionales con un interés temprano enfocado en el desarrollo de páginas web FrontEnd, con ganas de maximizar sus habilidades en HTML y CSS"
+    />
+    <!-- * Description: Es la descripción que aparecerá en nuestro página web cuando sea buscada por motores de búsqueda como Google, tiene que ver mucho la parte de optimizar el SEO de la página -->
+
+    <meta charset="UTF-8" />
+    <!-- ? Meta: Define metadatos sobre el documento y la codificación que se usará -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ? Viewport Width: Adapta la página web según el ancho del dispositivo en cuestión -->
+    <meta name="robots" content="index, follow" />
+    <!-- ? Robots: Indica a los motores de búsqueda cómo rastrear e indexar la página (indexar la página y seguir los enlaces) -->
+    <meta name="theme-color" content="#0f0f17" />
+    <!-- ? Theme-Color: Define el color de la barra de título del navegador en dispositivos móviles -->
+
+    <link rel="icon" type="image/png" href="../images/maletin.png" />
+    <!-- * Link: En este caso, nos encargamos de poner el favicon de nuestra página web; el logo que aparecerá en la pestaña del navegador -->
+
+    <link rel="alternate" href="https://kat404.github.io/en" hreflang="en" />
+    <!-- * Alternate: En este caso, nos encargamos de poner el enlace alternativo de nuestra página web para el idioma Inglés -->
+    <link
+      rel="canonical"
+      href="https://kat404.github.io/FrontEnd-Aprendizaje"
+    />
+    <!-- * Canonical: Señala a los motores de búsqueda cuál es la versión principal del sitio web para evitar duplicados -->
+
+    <!-- ! Open Graph: Modelo que permite la buena visualización de nuestro contenido en redes sociales -->
+    <!--
+    * Property: Define la propiedad del Open Graph
+    * Content: Define el contenido de la propiedad del Open Graph
+    ? Title: Define el título de la página web
+    ? Description: Define la descripción de la página web
+    ? Image: Define la imagen de la página web
+    ? URL: Define la URL de la página web
+    ? Type: Define el tipo de la página web
+    ? Locale: Define el idioma de la página web
+    -->
+    <meta
+      property="og:title"
+      content="Portafolio Personal - José Luis Ramírez Sánchez"
+    />
+    <meta
+      property="og:description"
+      content="Portafolio de José Luis, un estudiante en Ingeniería en Sistemas Computacionales con un interés temprano enfocado en el desarrollo de páginas web FrontEnd, con ganas de maximizar sus habilidades en HTML y CSS"
+    />
+    <meta
+      property="og:image"
+      content="https://kat404.github.io/FrontEnd-Aprendizaje/images/maletin.png"
+    />
+    <meta
+      property="og:url"
+      content="https://kat404.github.io/FrontEnd-Aprendizaje"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_MX" />
+
+    <style>
+      /* 
+      background-color: Define el color que va a tener nuestra página web 
+      color: Define el color que va a tener el texto de nuestra página web
+      */
+      body {
+        background-color: #1e1e2e;
+        color: #eae6fee8;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- ! Body: Representa el contenido del documento HTML que se quiera ver y renderizar -->
+    <header>
+      <!-- * Header: Representa el encabezado del documento HTML, usualmente suele ser replicable y genérico dentro del abanico de la página web -->
+      <h1>Portafolio Personal - <em>José Luis</em> Ramírez Sánchez</h1>
+
+      <nav id="indice" role="navigation">
+        <!-- ? Nav: Nos permite tener un sistema de navegación en nuestra web, puede verse como un índice propio e integrado -->
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#mi-vida">Mi Vida</a>
+        <a href="#mis-gustos">Mis Gustos</a>
+        <a href="#aficiones">Aficiones</a>
+        <a href="#mis-proyectos">Mis Proyectos</a>
+        <a href="#tecnologias-de-interes">Tecnologías de Interés</a>
+        <br />
+        <p><small>Redes Sociales:</small></p>
+        <a href="https://github.com/Kat404" target="_blank" rel="noreferrer"
+          >GitHub</a
+        >
+        <!--
+        * A: Representa un enlace o redireccionamiento entre la misma página o hacia otra
+        ? Target: Define el destino del enlace o del redireccionamiento
+        ? Rel: Define la relación entre la página actual y la página enlazada
+        ? Noreferrer: Define que no se envíe información del navegador al enlace, bueno por motivos de privacidad
+        -->
+      </nav>
+    </header>
+    <main role="main">
+      <!-- 
+      ! Main: Representa el contenido principal del documento HTML, suele ser único y diferenciable, además de que solo puede haber una etique <main> en un archivo HTML
+      ? Notas: EL <main> no se deben incluir elementos que se repitan en varias páginas, como el encabezado <header> o el pie de página <footer>, únicamente debe ir el contenido específico y condicional de esa página en cuestión
+      ? Notas Adicionales: A veces es preferible usar HTML semántico en vez de usar divs y spans para facilitar la accesibilidad y la comprensión de los motores de búsqueda aunque su uso no está prohibido para nada
+      ? Role: Define el rol del elemento, en este caso, el rol del <main> es "main", este sirve para que los motores de búsqueda y los lectores de pantalla puedan identificar el contenido principal de la página web
+      -->
+      <section>
+        <header>
+          <h2 id="sobre-mi">Sobre Mí</h2>
+        </header>
+        <p>
+          <!-- * P: Representa un párrafo -->
+          Bienvenido a mi portafolio personal. Aquí encontrarás información
+          sobre mis <strong>proyectos</strong>, habilidades y experiencia
+          profesional.
+        </p>
+        <br />
+        <!-- ? Br: Representa un salto de línea -->
+        <a href="https://www.reddit.com/user/Kat_404" target="_blank">Reddit</a>
+        <!-- ? targer="_blank" significa que redirigirá a la página seleccionable pero en una Nueva Pestaña -->
+      </section>
+      <section>
+        <header>
+          <h2 id="mi-vida">Mi Vida</h2>
+        </header>
+        <p>
+          Actualmente soy un estudiante en Ingeniería en Sistemas
+          Computacionales,<br />
+          me gustan mucho los sistemas operativos y me quiero enfocar en el
+          desarrollo frontend.
+        </p>
+        <p id="aficiones">Algunos de mis gustos o aficiones son:</p>
+        <ul>
+          <!-- * Ul: Representa una lista no ordenada -->
+          <li>Sistemas Operativos: Linux (Debian, Fedora, Arch)</li>
+          <!-- * Li: Representa un elemento de lista -->
+          <li>
+            Desarrollo Web (Aprendizaje Temprano): HTML y CSS, con ganas de
+            dominar frameworks para front como Astro con HTMX y frameworks de
+            CSS como Bootstrap o TailwindCSS
+          </li>
+          <li>
+            Mejoramiento de la seguridad y privacidad de sistemas y navegadores:
+            AdBlockers, Firewalls, etc.
+          </li>
+        </ul>
+      </section>
+
+      <aside>
+        <!-- ? Aside: Sirve para catalogar contenido no relevante conforme al contenido original, es como si fuese un extra, también lo podríamos ver como un contenido indirectamente relacionado -->
+        <header>
+          <h3 id="mis-gustos">Mis Gustos</h3>
+        </header>
+        <p>Dentro de mis gustos personales están:</p>
+        <ul>
+          <li>El helado de vainilla</li>
+          <li>Los gatos, <em>obviamente</em></li>
+          <li>Programar y aprender</li>
+          <li>Hacer ejercicio casual</li>
+        </ul>
+      </aside>
+
+      <section>
+        <header>
+          <h2 id="mis-proyectos">Mis Proyectos</h2>
+        </header>
+        <ul>
+          <li class="list-project">
+            <!-- * Class: Nos ayuda a darle una clase a un elemento -->
+            <a href="https://github.com/Kat404/linux_security.conf"
+              >Configuración Out-of-the-Box</a
+            >
+            para mejorar la seguridad nativa de Linux mediante System-d
+          </li>
+          <li class="list-project">
+            <a href="https://github.com/Kat404/ZSH-Terminal">ZSH-Terminal</a>:
+            Guía para principiantes usando la liell ZSH
+          </li>
+          <li class="list-project">
+            <a href="https://github.com/Kat404/FISH-Terminal">FISH-Terminal</a>:
+            Guía para principiantes usando la shell FISH
+          </li>
+          <li class="list-project">
+            <a href="https://github.com/Kat404/dotfiles">Dotfiles</a>:
+            Configuración personal para sistemas operativos Linux y demás
+            configuraciones para mucho software que utilizo
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <!-- * Section: Se usa para abarcar secciones genéricas de un documento -->
+        <!-- <article> -->
+        <!-- * Article: Funciona como un bloque independiente de información, si se saca de su contexto, este sigue permaneciendo con su sentido, se puede usar comúmente en un post de un blog, un comentario o producto -->
+        <header>
+          <h3 id="tecnologias-de-interes">Tecnologías de Interés</h3>
+        </header>
+        <p>
+          Fundamentalmente son las básicas dentro del desarrollo web:
+          <br />
+          HTML, CSS y JavaScript
+        </p>
+        <footer>
+          <small
+            >"Todo aprendizaje lleva tiempo, sudor y esfuerzo. Es un largo
+            camino pero no imposible de cursar"</small
+          >
+        </footer>
+        <!-- </article> -->
+      </section>
+      <aside>
+        <header>
+          <h3>Mi primer mascota</h3>
+        </header>
+        <!-- 
+        ! ID: Nos ayuda a darle un nombre único a un elemento
+        * Title: Nos ayuda a darle un nombre a un elemento, aparece cuando pasamos el mouse sobre el elemento
+        ? Alt: Nos ayuda a darle una descripción a un elemento, si la imagen no puede cargar, este texto será el que aparecerá en su lugar
+        ? Src: Nos ayuda a darle la ruta a un elemento
+        ? Height: Nos ayuda a darle la altura a un elemento
+        ? Width: Nos ayuda a darle la anchura a un elemento
+        -->
+        <img
+          id="jose-luis-cat"
+          title="Foto del gato de José Luis"
+          alt="Foto de mi gato acostado en su maceta"
+          src="/images/my-cat.jpg"
+          height="200"
+          width="200"
+        />
+      </aside>
+    </main>
+    <footer>
+      <!-- * Footer: Nos permite tener un pie de página en nuestra web -->
+      <p>© 2025 José Luis Ramírez Sánchez. Todos los derechos reservados.</p>
+    </footer>
+  </body>
+</html>
