@@ -32,5 +32,5 @@ Este podrá ser utilizado para mostrar mis habilidades y experiencia en el desar
 
 ### 📜 Licencia
 
-Este repositorio está licenciado bajo la [MIT License](https://choosealicense.com/licenses/mit/).
+Este repositorio está licenciado bajo la [The Unlicense](https://choosealicense.com/licenses/unlicense/).
 Esto con el propósito de poder divulgar el conocimiento de manera libre y gratuita para todo aquel con acceso a Internet. :D

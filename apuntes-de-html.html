@@ -1,112 +1,191 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
+  <head>
+    <title>Apuntes de HTML</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Apuntes de HTML" />
+    <meta name="author" content="José Luis" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
   <body>
-    <h1>¿Qué es HTML?</h1>
-    <h3>Sus siglas signfican Hyper Text Markup Language</h3>
+    <section>
+      <h1>¿Qué es HTML?</h1>
+      <h2>Sus siglas signfican Hyper Text Markup Language</h2>
 
-    <p>HTML es el lenguaje de marcado estándar para crear páginas web.</p>
-    <p>En la Web, CSS se usa para la presentación</p>
-    <p>En la Web, JavaScript se usa para la interactividad</p>
-    <p>
-      <strong>HTML</strong> se encargade darle formato y <em>describir</em> el
-      contenido de la Web
-    </p>
-    <p>
-      Dentro de HTML, el < h1 > es la etiqueta de apertura mientras que el < /h1
-      > es la etiqueta de cierre.
-      Además de que, cuando escribimos HTML, no se muestran las etiquetas, ya
-      que, el navegador las interpreta.
-    </p>
-    <p>
-      Una etiqueta es < h1 > < / h1 > mientras que un elemento es todo < h1
-      >contenido< / h1 >
-    </p>
-    <h4>
-      Nota Importante: Las etiquetas deben cerrarse en el orden inversor en el
-      que se abrieron. <br />Por ejemplo:
-      <p>Texto <strong>importante</strong></p>
-    </h4>
-    <br />
-    <h3>Atributos HTML</h3>
-    <p>
-      Son valores que se le pueden dar a las
-      etiquetas para que tengan ciertas características. Por ejemplo en un img
-      con un <strong>src="lugar_de_la_imagen"</strong>
-    </p>
-    <p>
-      Nota Curiosa: En HTML, no se necesitan las comillas si el valor no tiene
-      espacio, por ejemplo: 
+      <p>HTML es el lenguaje de marcado estándar para crear páginas web.</p>
+      <p>En la Web, CSS se usa para la presentación</p>
+      <p>En la Web, JavaScript se usa para la interactividad</p>
+      <p>
+        <strong>HTML</strong> se encargade darle formato y <em>describir</em> el
+        contenido de la Web
+      </p>
+      <p>
+        Dentro de HTML, el < h1 > es la etiqueta de apertura mientras que el <
+        /h1 > es la etiqueta de cierre. Además de que, cuando escribimos HTML,
+        no se muestran las etiquetas, ya que, el navegador las interpreta.
+      </p>
+      <p>
+        Una etiqueta es < h1 > < / h1 > mientras que un elemento es todo < h1
+        >contenido< / h1 >
+      </p>
+      <h4>
+        Nota Importante: Las etiquetas deben cerrarse en el orden inversor en el
+        que se abrieron. <br />Por ejemplo: Texto <strong>importante</strong>
+      </h4>
+      <br />
+    </section>
+    <section>
+      <h3>Atributos HTML</h3>
+      <p>
+        Son valores que se le pueden dar a las etiquetas para que tengan ciertas
+        características. Por ejemplo en un img con un
+        <strong>src="lugar_de_la_imagen"</strong>
+      </p>
+      <p>
+        Nota Curiosa: En HTML, no se necesitan las comillas si el valor no tiene
+        espacio, por ejemplo:
+      </p>
       <ul>
         <li>img title=gato src="imagen.jpg"</li>
         <li>input type=text value=Hola</li>
       </ul>
-      Aunque se puedan omitir las comillas, es recomendable usarlas para
-      mayor claridad y legibilidad.
-    </p>
-    <p>
-      También podemos encontrar a <strong>ID</strong> y <strong>Class</strong>
-      que son atributos que se usan para identificar elementos.
+      <p>
+        Aunque se puedan omitir las comillas, es recomendable usarlas para mayor
+        claridad y legibilidad.
+      </p>
+      <p>
+        También podemos encontrar a <strong>ID</strong> y <strong>Class</strong>
+        que son atributos que se usan para identificar elementos.
+      </p>
       <ul>
         <li>
           ID: Es un identificador único, es decir, no puede haber dos elementos
-          con el mismo ID.<br>
-          Por ejemplo: Si asignamos a un img id="foto-yo", al ya existir un ID llamado <em>foto-yo</em>, <strong>ningún otro</strong> elementos puede hacer uso de ese ID.
+          con el mismo ID.<br />
+          Por ejemplo: Si asignamos a un img id="foto-yo", al ya existir un ID
+          llamado <em>foto-yo</em>, <strong>ningún otro</strong> elementos puede
+          hacer uso de ese ID.
         </li>
         <li>
-          Class: Permite clasificar varios elementos bajo un mismo nombre.
-          Por ejemplo: Podemos asignar un class="list-items" a varios elementos y usar una misma clase para referirnos a ellos.
+          Class: Permite clasificar varios elementos bajo un mismo nombre. Por
+          ejemplo: Podemos asignar un class="list-items" a varios elementos y
+          usar una misma clase para referirnos a ellos.
+        </li>
+        <li>
+          Role: Permite especificar el propósito de un elemento. Muchos
+          elementos como header y article ya tienen un role definido por
+          defecto. Por ejemplo: Podemos asignar un role="button" a un elemento
+          para indicar que es un botón. Algunos de los roles que podemos
+          implementar son:
+          <ul>
+            <li>alert: Para mostrar mensajes urgentes</li>
+            <li>dialog: Para mostrar un diálogo modal</li>
+            <li>navigation: Para definir una barra de navegación</li>
+          </ul>
+        </li>
+        <li>
+          Como nota, lo ideal es usar un elemento HTML <strong>ideal</strong>,
+          en vez de usar un div con role="button" mejor usar directamente el
+          elemento button
         </li>
       </ul>
-    <h6>Nota Importante:
-    Los atributos como <em>class</em>, <em>id</em>, <em>style</em> funcionan con cualquier elementos. Mientras que <em>src</em>, <em>alt</em>, <em>title</em>, <em>hidden</em>, <em>checked</em>, etc. funcionan con ciertos elementos.
-    </h6>
-    </p>
+    </section>
+    <section>
+      <h6>
+        Nota Importante: Los atributos como <em>class</em>, <em>id</em>,
+        <em>style</em> funcionan con cualquier elementos. Mientras que
+        <em>src</em>, <em>alt</em>, <em>title</em>, <em>hidden</em>,
+        <em>checked</em>, etc. funcionan con ciertos elementos.
+      </h6>
+    </section>
 
-    <h3>Atributos Booleanos</h3>
-    <p>
-      Son atributos que no necesitan
-      valor, por ejemplo: <strong>hidden</strong> o <strong>checked</strong>
-      Ejemplo de uso:
+    <section>
+      <h3>Atributos Booleanos</h3>
+      <p>
+        Son atributos que no necesitan valor, por ejemplo:
+        <strong>hidden</strong> o <strong>checked</strong>
+        Ejemplo de uso:
+      </p>
       <ul>
         <li>img hidden src="imagen.jpg"</li>
-        <li><em>hidden</em> hace que la imagen no se muestre pero sigue existiendo, además de que con estos atributos, el mero hecho de aparecer ya aplican su propósito, es decir, no es necesario poner <em>hidden="true"</em> ni nada de eso.</li>
+        <ul>
+          <li>
+            <em>hidden</em> hace que la imagen no se muestre pero sigue
+            existiendo, además de que con estos atributos, el mero hecho de
+            aparecer ya aplican su propósito, es decir, no es necesario poner
+            <em>hidden="true"</em> ni nada de eso.
+          </li>
+        </ul>
         <li>input type=checkbox checked</li>
       </ul>
-    </p>
-    <br>
+    </section>
+    <br />
 
-    <h3>Case Sensitive en HTMl</h3>
-    <p>
-      HTML no es <em>case sensitive</em>, es decir, no pasa nada al poner un IMG en vez de un img.<br>
-      Aunque a día de hoy, se recomienda altamente usar minúsculas por los siguientes motivos:
+    <section>
+      <h3>Case Sensitive en HTML</h3>
+      <p>
+        HTML no es <em>case sensitive</em>, es decir, no pasa nada al poner un
+        IMG en vez de un img.<br />
+        Aunque a día de hoy, se recomienda altamente usar minúsculas por los
+        siguientes motivos:
+      </p>
       <ul>
         <li>
-          <strong>Consistencia</strong>: Se mantiene un código consistente y legible, fácil de leer y analizar.
+          <strong>Consistencia</strong>: Se mantiene un código consistente y
+          legible, fácil de leer y analizar.
         </li>
         <li>
-          <strong>Estándar Actual</strong>: Las normas actuales de la web recomiendan altamente usar minúsculas, ya que es una muy buena práctica el hecho de no combinar más de 2 tipos de letras; solo minúsculas.
-        </li>
-      </ul> 
-    </p>
-
-    <h3>Etiquetas</h3>
-    <p>
-      <ul>
-        <li>
-          <strong>Strong</strong>: Se usa para marcar y resaltar texto importante en negritas
-        </li>
-        <li>
-          <em>Em</em>: Se usa para marcar un énfasis ligero y menos pesado que con "strong" dándole un toque cursivo.
-        </li>
-        <li>
-          Article: Es un bloque de contenidos para marcar artículos dentro de la página web, puede existir de forma independiente
-        </li>
-        <li>
-          Div y Span: Son etiquetas muy útiles pero no son semántica y por lo tanto habría que regular su uso para implementarlas correctamente.
-          Div: Sirve para agrupar bloques de contenidos y poder aplicarle estilos y scripts de manera más rápida y sencilla
-          Span: Sirve para agrupar bloques de contenidos en línea que necesitan estilos específicos 
+          <strong>Estándar Actual</strong>: Las normas actuales de la web
+          recomiendan altamente usar minúsculas, ya que es una muy buena
+          práctica el hecho de no combinar más de 2 tipos de letras; solo
+          minúsculas.
         </li>
       </ul>
-    </p>
+    </section>
+
+    <section>
+      <h3>Etiquetas</h3>
+      <ul>
+        <li>
+          <strong>Strong</strong>: Se usa para marcar y resaltar texto
+          importante en negritas
+        </li>
+        <li>
+          <em>Em</em>: Se usa para marcar un énfasis ligero y menos pesado que
+          con "strong" dándole un toque cursivo.
+        </li>
+        <li>
+          Article: Es un bloque de contenidos para marcar artículos dentro de la
+          página web, puede existir de forma independiente
+        </li>
+        <li>
+          Div y Span: Son etiquetas muy útiles pero no son semántica y por lo
+          tanto habría que regular su uso para implementarlas correctamente.
+          Div: Sirve para agrupar bloques de contenidos y poder aplicarle
+          estilos y scripts de manera más rápida y sencilla Span: Sirve para
+          agrupar bloques de contenidos en línea que necesitan estilos
+          específicos
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h3>Enlaces Especiales</h3>
+      <p>
+        En HTML, hay pequeños elementos que podemos usar que van más allá del
+        protocolo HTTP mediante un <strong>a href</strong>, como los que veremos
+        a continuación
+      </p>
+      <ul>
+        <li>
+          mailto: Sirve para crear enlaces que automáticamente abran el cliente
+          de correo del usuario Por ejemplo: "< a
+          href="mailto:emailgenerico@gmail.com>Envíame un correo< /a>"
+        </li>
+        <li>
+          tel: Redirige a una app para hacer llamadas telefónicas con el número
+          proporcionado Por ejemplo: "< a href="tel:+521234567899">LLama ahora<
+          /a>"
+        </li>
+      </ul>
+    </section>
   </body>
 </html>

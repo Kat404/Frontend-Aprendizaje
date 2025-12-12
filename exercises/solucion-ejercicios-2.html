@@ -1,70 +1,159 @@
 <!DOCTYPE html>
+<!-- ! <!DOCTYPE html>: Define el tipo de documento HTML -->
 <html lang="es">
+  <!-- * <html>: Define el documento HTML -->
+  <!-- * lang="es": Define el idioma del documento -->
   <head>
-    <h2>Solución de los Ejercicios 2</h2>
+    <!-- * <head>: Define el encabezado del documento -->
+    <meta charset="UTF-8" />
+    <!-- * <meta charset="UTF-8">: Define el conjunto de caracteres del documento -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- * <meta name="viewport">: Define el viewport del documento -->
+    <meta name="description" content="Solución de los Ejercicios 2" />
+    <title>Solución de los Ejercicios 2</title>
   </head>
 
   <body>
-    <h3>Tablas Mejoradas: Ejercicio 1</h3>
-    <table>
-      <caption>
-        Lista del Supermercado
-      </caption>
+    <!-- ! Body: Define el cuerpo del documento -->
+    <header>
+      <!-- * Header: Define el encabezado del documento -->
+      <h1>Solución de los Ejercicios 2</h1>
+    </header>
+    <main>
+      <!-- * Main: Define el contenido principal del documento -->
+      <section>
+        <!-- * Section: Define una sección del documento -->
+        <h2>Tablas Mejoradas: Ejercicio 1</h2>
+        <table>
+          <!-- * Table: Define la tabla -->
+          <caption>
+            <!-- * Caption: Define la caption de la tabla -->
+            Lista del Supermercado
+          </caption>
 
-      <thead>
-        <tr>
-          <th>Producto</th>
-          <th>Cantidad</th>
-          <th>Precio</th>
-        </tr>
-      </thead>
+          <thead>
+            <!-- * Thead: Define el thead de la tabla -->
+            <tr>
+              <!-- ? Tr: Define una Table Row (fila) de la tabla -->
+              <th>Producto</th>
+              <!-- ? Th: Define una Table Header (encabezado) de la tabla -->
+              <th>Cantidad</th>
+              <th>Precio</th>
+            </tr>
+          </thead>
 
-      <tbody>
-        <tr>
-          <td>Leche</td>
-          <td>2L</td>
-          <td>35MXN</td>
-        </tr>
-        <tr>
-          <td>Bolillo</td>
-          <td>8 pzs</td>
-          <td>16MXN</td>
-        </tr>
-        <tr>
-          <td>Árbol de Navidad</td>
-          <td>1 pz</td>
-          <td>480MXN</td>
-        </tr>
-      </tbody>
+          <tbody>
+            <!-- * Tbody: Define el tbody de la tabla -->
+            <tr>
+              <!-- ? Tr: Define una Table Row (fila) de la tabla -->
+              <td>Leche</td>
+              <!-- ? Td: Define una Table Data (celda) de la tabla -->
+              <td>2L</td>
+              <td>35MXN</td>
+            </tr>
+            <tr>
+              <td>Bolillo</td>
+              <td>8 pzs</td>
+              <td>16MXN</td>
+            </tr>
+            <tr>
+              <td>Árbol de Navidad</td>
+              <td>1 pz</td>
+              <td>480MXN</td>
+            </tr>
+          </tbody>
 
-      <tfoot>
-        <tr>
-          <td>Total</td>
-          <td></td>
-          <td>531MXN</td>
-        </tr>
-      </tfoot>
-    </table>
+          <tfoot>
+            <!-- * Tfoot: Define el tfoot de la tabla -->
+            <tr>
+              <!-- ? Tr: Define una Table Row (fila) de la tabla -->
+              <td>Total</td>
+              <!-- ? Td: Define una Table Data (celda) de la tabla -->
+              <td></td>
+              <td>531MXN</td>
+            </tr>
+          </tfoot>
+        </table>
+      </section>
 
-    <br />
+      <!-- ? Separación -->
+      <br />
 
-    <h3>Imágenes con Enlaces y <strong>target</strong>: Ejercicio 2</h3>
-    <a href="https://www.google.com" target="_blank">
-      <img src="../images/google.png" height="150" width="270" />
-    </a>
-    <a href="https://www.youtube.com" target="_blank">
-      <img src="../images/youtube.png" height="180" width="270" />
-    </a>
-    <a href="https://github.com" target="_blank">
-      <img src="../images/github.png" height="200" width="270" />
-    </a>
+      <section>
+        <!-- * Section: Define una sección del documento -->
+        <h2>Imágenes con Enlaces y <strong>target</strong>: Ejercicio 2</h2>
+        <a href="https://www.google.com" target="_blank">
+          <img src="../images/google.png" height="150" width="270" />
+        </a>
+        <a href="https://www.youtube.com" target="_blank">
+          <img src="../images/youtube.png" height="180" width="270" />
+        </a>
+        <a href="https://github.com" target="_blank">
+          <img src="../images/github.png" height="200" width="270" />
+        </a>
+      </section>
 
-    <h3>Formulario: Ejercicio 3</h3>
-    <form>
-      <label>
-        Nombre:
-        <input type="text" />
-      </label>
-    </form>
+      <!-- ? Separación -->
+      <br />
+
+      <section>
+        <!-- * Section: Define una sección del documento -->
+        <h2>Formulario: Ejercicio 3</h2>
+
+        <h4>Comentarios y Sugerencias</h4>
+        <form action="">
+          <label for="campo_nombre"> Nombre: </label>
+          <input id="campo_nombre" type="text" autocomplete="name" />
+          <br />
+          <label for="campo_apellido"> Apellido: </label>
+          <input id="campo_apellido" type="text" autocomplete="family-name" />
+          <br />
+          <label for="campo_comentario"> Tu comentario o sugerencia: </label>
+          <textarea id="campo_comentario" autocomplete="off">
+          Escribe tu comentario o sugerencia aquí
+        </textarea
+          >
+          <br />
+          <label for="cumplimiento_expectativas">
+            ¿Este repositorio cumplió con tus expectativas?
+          </label>
+          <input id="cumplimiento_expectativas" type="checkbox" />
+          <br />
+          <button type="submit">Enviar formulario</button>
+        </form>
+      </section>
+
+      <br />
+
+      <section>
+        <!-- * Section: Define una sección del documento -->
+        <h2>Acordeones Nativos: Ejercicio 5</h2>
+        <details>
+          <!-- * Details: Es un acordeón básico, puede ser usado para FAQ's (preguntas frecuentes), preguntas y datos curiosos -->
+          <summary>¿Cuál es mi color favorito?</summary>
+          <!-- ? Summary: Define el título del acordeón <details> -->
+          <p>
+            <!-- ? P (Paragraph): Define el contenido del acordeón <details> -->
+            Mi color favorito es el <strong>azul</strong> ya que me parece muy
+            acuático y fresco
+          </p>
+        </details>
+        <details>
+          <!-- ! Si queremos usar otro acordeón, debemos agregar otro <details>: No se puede usar el mismo <details> dos veces -->
+          <summary>¿Cómo era mi gato?</summary>
+          <!-- ? Summary: Define el título del acordeón <details> -->
+          <p>
+            Mi gato era de color naranja, era muy cariñoso y juguetón con la
+            gente, le gustaba maullarme y recibirme cuando llegaba de la escuela
+          </p>
+        </details>
+      </section>
+      <br />
+    </main>
+    <footer>
+      <!-- ? Footer: Define el pie de página -->
+      <h5>Semántica Básica: Ejercicio 4</h5>
+      <p>© 2025 Práctica de HTML</p>
+    </footer>
   </body>
 </html>

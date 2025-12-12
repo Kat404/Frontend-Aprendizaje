@@ -80,21 +80,33 @@
     <!-- ! Body: Representa el contenido del documento HTML que se quiera ver y renderizar -->
     <header>
       <!-- * Header: Representa el encabezado del documento HTML, usualmente suele ser replicable y genérico dentro del abanico de la página web -->
-      <h1>Portafolio Personal - <em>José Luis</em> Ramírez Sánchez</h1>
+      <div align="center">
+        <h1>Portafolio Personal - <em>José Luis</em> Ramírez Sánchez</h1>
+      </div>
 
-      <nav id="indice" role="navigation">
-        <!-- ? Nav: Nos permite tener un sistema de navegación en nuestra web, puede verse como un índice propio e integrado -->
-        <a href="#sobre-mi">Sobre mí</a>
-        <a href="#mi-vida">Mi Vida</a>
-        <a href="#mis-gustos">Mis Gustos</a>
-        <a href="#aficiones">Aficiones</a>
-        <a href="#mis-proyectos">Mis Proyectos</a>
-        <a href="#tecnologias-de-interes">Tecnologías de Interés</a>
-        <br />
-        <p><small>Redes Sociales:</small></p>
-        <a href="https://github.com/Kat404" target="_blank" rel="noreferrer"
-          >GitHub</a
-        >
+      <div align="center">
+        <nav id="indice" role="navigation">
+          <!-- ? Nav: Nos permite tener un sistema de navegación en nuestra web, puede verse como un índice propio e integrado -->
+          <a href="#sobre-mi">Sobre mí</a>
+          <a href="#mi-vida">Mi Vida</a>
+          <a href="#mis-gustos">Mis Gustos</a>
+          <a href="#aficiones">Aficiones</a>
+          <a href="#mis-proyectos">Mis Proyectos</a>
+          <a href="#tecnologias-de-interes">Tecnologías de Interés</a>
+          <br />
+          <p><small>Redes Sociales:</small></p>
+          <a href="https://github.com/Kat404" target="_blank" rel="noreferrer"
+            >GitHub</a
+          >
+          <a
+            href="https://www.reddit.com/user/Kat_404"
+            target="_blank"
+            rel="noreferrer"
+            >Reddit</a
+          >
+        </nav>
+      </div>
+        <!-- ? targer="_blank" significa que redirigirá a la página seleccionable pero en una Nueva Pestaña -->
         <!--
         * A: Representa un enlace o redireccionamiento entre la misma página o hacia otra
         ? Target: Define el destino del enlace o del redireccionamiento
@@ -122,8 +134,6 @@
         </p>
         <br />
         <!-- ? Br: Representa un salto de línea -->
-        <a href="https://www.reddit.com/user/Kat_404" target="_blank">Reddit</a>
-        <!-- ? targer="_blank" significa que redirigirá a la página seleccionable pero en una Nueva Pestaña -->
       </section>
       <section>
         <header>
@@ -180,7 +190,7 @@
           </li>
           <li class="list-project">
             <a href="https://github.com/Kat404/ZSH-Terminal">ZSH-Terminal</a>:
-            Guía para principiantes usando la liell ZSH
+            Guía para principiantes usando la shell ZSH
           </li>
           <li class="list-project">
             <a href="https://github.com/Kat404/FISH-Terminal">FISH-Terminal</a>:
@@ -201,11 +211,19 @@
         <header>
           <h3 id="tecnologias-de-interes">Tecnologías de Interés</h3>
         </header>
-        <p>
-          Fundamentalmente son las básicas dentro del desarrollo web:
-          <br />
-          HTML, CSS y JavaScript
-        </p>
+        <p>Fundamentalmente son las básicas dentro del desarrollo web:</p>
+        <ol type="1">
+          <!--
+          * <ol> tiene muchas opciones de atributos como:
+            -> type="" (1, A, a, I, i): Cambia la viñeta inicial de la lista
+            -> reversed: Hace que la lista tenga un sentido inverso
+            -> start="": Podemos modificar el valor inicial de la lista
+          -->
+          <li>HTML</li>
+          <li value="2">CSS</li>
+          <!-- ? Podemos usar el atributo value="*" para darle un valor específico a un elemento de nuestra lista -->
+          <li>JavaScript</li>
+        </ol>
         <footer>
           <small
             >"Todo aprendizaje lleva tiempo, sudor y esfuerzo. Es un largo
@@ -225,20 +243,35 @@
         ? Src: Nos ayuda a darle la ruta a un elemento
         ? Height: Nos ayuda a darle la altura a un elemento
         ? Width: Nos ayuda a darle la anchura a un elemento
+        ? Download: Nos ayuda a descargar la imagen (solo podemos usar download con archivos dentro de nuestro dominio)
         -->
-        <img
-          id="jose-luis-cat"
-          title="Foto del gato de José Luis"
-          alt="Foto de mi gato acostado en su maceta"
-          src="/images/my-cat.jpg"
-          height="200"
-          width="200"
-        />
+        <a href="images/my-cat.jpg" download>
+          <img
+            id="jose-luis-cat"
+            title="Foto del gato de José Luis"
+            alt="Foto de mi gato acostado en su maceta"
+            src="images/my-cat.jpg"
+            height="200"
+            width="200"
+          />
+        </a>
       </aside>
+      <br />
     </main>
     <footer>
       <!-- * Footer: Nos permite tener un pie de página en nuestra web -->
       <p>© 2025 José Luis Ramírez Sánchez. Todos los derechos reservados.</p>
+      <!-- ? Suele ser común el derecho de copyright en las páginas webs, especialmente en empresas -->
+      <p>
+        <a href="mailto:xocemyst@tutamail.com"> 📬 Envíame un correo </a>
+        <!-- ? mailto: Abre el cliente de correo del usuario y autocompleta el destinatario, útil si se usa el correo -->
+        <a href="tel:+5218112345678"> 📲 Llámame </a>
+        <!-- ? tel: Abre el cliente de teléfono/llamada del usuario y autocompleta el número, útil en ventas y soporte -->
+        <a href="https://wa.me/5218112345678?text=Hola" target="_blank"
+          >💬 Whatsapp
+        </a>
+        <!-- ? wa.me: Abre el WhatsApp del usuario y autocompleta el número con el mensaje deseado -->
+      </p>
     </footer>
   </body>
 </html>
