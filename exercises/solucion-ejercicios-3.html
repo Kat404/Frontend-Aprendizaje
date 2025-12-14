@@ -1,25 +1,212 @@
 <!DOCTYPE html>
+<!-- ! Doctype: Define el tipo de documento HTML y su versión -->
 <html lang="es">
+  <!-- * <html>: Define el documento HTML -->
+  <!-- * Lang: Define el idioma del documento como español -->
   <head>
+    <!-- * Head: Contiene metadatos y enlaces a recursos externos -->
     <meta charset="UTF-8" />
+    <!-- * Charset UTF-8: Permite el uso de caracteres especiales como ñ y tildes -->
     <title>Solución de los Ejercicios 3</title>
+    <!-- 
+    ! Open Graph: Protocolo para mejorar la visualización al compartir en redes sociales 
+    * property="og:title": Título que aparecerá en la tarjeta social
+    * property="og:description": Breve descripción del contenido
+    * property="og:image": URL de la imagen destacada (thumbnail)
+    * property="og:type": Tipo de contenido (website, article, video, etc.)
+    * property="og:locale": Idioma y región del contenido (ej: es_MX)
+    -->
+    <meta
+      property="og:title"
+      content="Solución de los Ejercicio 3 - FrontEnd Aprendizaje"
+    />
+    <meta
+      property="og:description"
+      content="Mira la solución a problemas básicos en HTML5"
+    />
+    <meta property="og:image" content="null" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_MX" />
   </head>
   <body>
+    <!-- ! Body: Contiene todo el contenido visible de la página -->
     <main>
+      <!-- * Main: Contenedor principal único del documento -->
       <h1>Solución de los Ejercicios 3</h1>
-      <br />
-      <h2>Mis Media</h2>
-      <p>Linux desde Cero: Con Nate Gentile</p>
-      <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube-nocookie.com/embed/knrc4q1S_q0?si=uHGBzdLsb5o2CZ8Z"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen
-      ></iframe>
+
+      <section id="ejercicio-3.1">
+        <!-- * Section: Divisor temático del contenido -->
+        <h2>Ejercicio 3.1: Mis Media</h2>
+        <p>Linux desde Cero: Con Nate Gentile</p>
+
+        <!-- 
+        ! Iframe: Marco para incrustar otra página web o recurso externo (como YouTube) 
+        ? allowfullscreen: Permite que el video se expanda a pantalla completa
+        ? src: URL del recurso a incrustar
+        -->
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube-nocookie.com/embed/knrc4q1S_q0?si=uHGBzdLsb5o2CZ8Z"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+        <br />
+
+        <p>¿Quieres un poco de buena música?</p>
+        <!-- 
+        * Audio: Etiqueta para reproducir sonido
+        ? controls: Muestra los controles nativos (play, pausa, volumen)
+        -->
+        <audio controls>
+          <!-- ! Source: Define la fuente del archivo de audio y su tipo MIME para que el navegador sepa cómo reproducirlo -->
+          <source
+            src="../media/Luis Miguel - La Incondicional.ogx"
+            type="audio/ogg"
+          />
+        </audio>
+        <br />
+      </section>
+
+      <section id="ejercicio-3.2">
+        <form action="">
+          <!-- * Form: Contenedor para elementos de entrada de datos -->
+          <header>
+            <h2>Ejercicio 3.2: Formularios Avanzados</h2>
+          </header>
+
+          <label>Selecciona tu sexo:</label>
+          <br />
+          <!-- 
+          * Input Type Radio: Permite seleccionar SOLAMENTE UNA opción de un grupo
+          ! Importante: Todos los radios del grupo deben tener el MISMO "name" (en este caso "gender") para ser excluyentes
+          -->
+          <label for="masculine">Masculino</label>
+          <input id="masculine" type="radio" name="gender" />
+          <label for="feminine">Femenino</label>
+          <input id="feminine" type="radio" name="gender" />
+          <label for="other">Otro</label>
+          <input id="other" type="radio" name="gender" />
+          <br />
+
+          <label>Selecciona tu país:</label>
+          <br />
+          <!-- 
+          * Select: Crea un menú desplegable
+          * Option: Define cada una de las opciones dentro del menú
+          ? Value: Es el valor que se envía al servidor cuando se selecciona esa opción
+          -->
+          <select id="seleccion-de-pais">
+            <option value="default">Selecciona un país</option>
+            <option value="mexico">México</option>
+            <option value="argentina">Argentina</option>
+            <option value="espana">España</option>
+          </select>
+          <br />
+
+          <label for="calendario-nacimiento">Fecha de Nacimiento: </label>
+          <br />
+          <!-- * Input Type Date: Muestra un selector de calendario nativo -->
+          <input id="calendario-nacimiento" type="date" />
+        </form>
+      </section>
+
+      <section id="ejercicio-3.3">
+        <header>
+          <h2>Ejercicio 3.3: Blog Semántico</h2>
+        </header>
+
+        <!-- 
+        ! Article: Contenido independiente y distribuible (como un post de blog o noticia)
+        -->
+        <article>
+          <header>
+            <h3>¿Por qué usar Linux?</h3>
+          </header>
+          <p>
+            Fecha de Publicación:
+            <!-- * Time: Etiqueta semántica para definir fechas y horas legibles por máquinas con datetime -->
+            <time datetime="2025-12-13">13 de diciembre de 2025</time>
+          </p>
+          <p>
+            <em>Linux</em> per se es un kernel creado por Linus Torvalds, es el
+            actual núcleo de la mayoría de servidores a nivel
+            <strong>mundial</strong>. Pero, Linux no fue diseño exclusivamente
+            para servidores, si no que, también puede ser usado como Sistema
+            Operativo de Escritorio, es decir, ser usado por las personas
+            comunes para tú o como yo.
+          </p>
+          <!-- * Blockquote: Indica que el bloque de texto es una cita textual de otra fuente -->
+          <blockquote>
+            "Una computadora es como el aire acondicionado. Se vuelve inútil una
+            vez que abres Windows. - Linus Torvalds"
+          </blockquote>
+
+          <h4>¿Qué distribución usar?</h4>
+          <p>
+            Es muy común y fácil iniciar en Linux mediante una buena
+            distribución que sea fácil y amigable con el usuario, ya que, vas a
+            aprender algo nuevo y es necesario que la capa de introducción sea
+            lo menos espesa posible, por eso creo fielmente que la mejor opción
+            para iniciar es con
+            <a href="https://www.linuxmint.com" target="_blank"
+              ><strong>Linux Mint</strong></a
+            >.
+          </p>
+          <p>
+            Linux Mint está basado en
+            <a href="https://ubuntu.com" target="_blank">Ubuntu</a>, que a su
+            vez está basado en
+            <a href="https://www.debian.org" target="_blank">Debian</a>. Todas
+            estas distribuciones usan un
+            <a
+              href="https://es.wikipedia.org/wiki/Sistema_de_gesti%C3%B3n_de_paquetes"
+              target="_blank"
+              >gestor de paquetes</a
+            >
+            para administrar toda la distribución y su software. <br />
+            Mira un ejemplo de código para su gestor de paquetes
+            <strong>APT</strong>:
+            <br />
+            <!-- * Code: Representa un fragmento de código de computadora -->
+            <code> sudo apt update && sudo apt upgrade </code>
+          </p>
+          <p>
+            Al adentrarte al mundo de Linux, te encontrarás con la
+            <em>terminal</em>, aquella cosa que parece solo para técnicos y
+            programadores especializados, ya que, al venir de Windows, jamás la
+            había usado a excepción de comandos que veías por Internet para
+            mejorar el rendimiento o limpiar la caché. Si te vas a adentrar al
+            mundo de la terminal, conocerás
+            <a href="https://es.wikipedia.org/wiki/Bash"
+              ><strong>Bash</strong></a
+            >, déjame darte un pequeño código shell en Bash (su configuración):
+          </p>
+
+          <!-- 
+          ! Pre: Texto preformateado. Respeta TODOS los espacios y saltos de línea tal cual están escritos. 
+          ? Ideal para bloques de código grandes donde la indentación importa.
+          -->
+          <pre>
+            <code>
+              #
+              # ~/.bashrc
+              #
+
+              # If not running interactively, don't do anything
+              [[ $- != *i* ]] && return
+
+              alias ls='ls --color=auto'
+              alias grep='grep --color=auto'
+              PS1='[\u@\h \W]\$ '
+              . "$HOME/.cargo/env"
+            </code>
+          </pre>
+        </article>
+      </section>
     </main>
   </body>
 </html>

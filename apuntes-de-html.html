@@ -10,7 +10,21 @@
   <body>
     <section>
       <h1>¿Qué es HTML?</h1>
-      <h2>Sus siglas signfican Hyper Text Markup Language</h2>
+      <div align="center">
+        <nav id="indice" role="navigation">
+          <h2>Índice</h2>
+          <a href="#introduccion">Introducción</a>
+          <a href="#atributos-html">Atributos HTML</a>
+          <a href="#atributos-booleanos">Atributos Booleanos</a>
+          <a href="#case-sensitive-html">Case Sensitive en HTML</a>
+          <a href="#etiquetas-html">Etiquetas</a>
+          <a href="#enlances-especiales-html">Enlaces Especiales</a>
+        </nav>
+      </div>
+      <h2 id="introduccion" title="Volver al Índice">
+        Sus siglas signfican Hyper Text Markup Language
+        <small><a href="#indice" title="Volver al Índice">↑</a></small>
+      </h2>
 
       <p>HTML es el lenguaje de marcado estándar para crear páginas web.</p>
       <p>En la Web, CSS se usa para la presentación</p>
@@ -28,6 +42,16 @@
         Una etiqueta es < h1 > < / h1 > mientras que un elemento es todo < h1
         >contenido< / h1 >
       </p>
+      <p>
+        Elemento de Bloque: Los elementos de bloque como <strong>div</strong>,
+        <strong>p</strong> y <strong>h1</strong> ocupan todo el ancho disponible
+        de la línea y por lo tanto, crean un salto de línea para empezar en ella
+      </p>
+      <p>
+        Elemento de Línea: Los elementos de línea como <strong>span</strong>,
+        <strong>a</strong> y <strong>strong</strong> no comienzan una línea y
+        únicamente ocupan el espacio necesario para aparecer en su contenido
+      </p>
       <h4>
         Nota Importante: Las etiquetas deben cerrarse en el orden inversor en el
         que se abrieron. <br />Por ejemplo: Texto <strong>importante</strong>
@@ -35,7 +59,10 @@
       <br />
     </section>
     <section>
-      <h3>Atributos HTML</h3>
+      <h3 id="atributos-html">
+        Atributos HTML
+        <small><a href="#indice" title="Volver al Índice">↑</a></small>
+      </h3>
       <p>
         Son valores que se le pueden dar a las etiquetas para que tengan ciertas
         características. Por ejemplo en un img con un
@@ -89,17 +116,20 @@
         </li>
       </ul>
     </section>
-    <section>
+    <aside>
       <h6>
         Nota Importante: Los atributos como <em>class</em>, <em>id</em>,
         <em>style</em> funcionan con cualquier elementos. Mientras que
         <em>src</em>, <em>alt</em>, <em>title</em>, <em>hidden</em>,
         <em>checked</em>, etc. funcionan con ciertos elementos.
       </h6>
-    </section>
+    </aside>
 
     <section>
-      <h3>Atributos Booleanos</h3>
+      <h3 id="atributos-booleanos">
+        Atributos Booleanos
+        <small><a href="#indice" title="Volver al Índice">↑</a></small>
+      </h3>
       <p>
         Son atributos que no necesitan valor, por ejemplo:
         <strong>hidden</strong> o <strong>checked</strong>
@@ -121,7 +151,10 @@
     <br />
 
     <section>
-      <h3>Case Sensitive en HTML</h3>
+      <h3 id="case-sensitive-html">
+        Case Sensitive en HTML
+        <small><a href="#indice" title="Volver al Índice">↑</a></small>
+      </h3>
       <p>
         HTML no es <em>case sensitive</em>, es decir, no pasa nada al poner un
         IMG en vez de un img.<br />
@@ -143,7 +176,10 @@
     </section>
 
     <section>
-      <h3>Etiquetas</h3>
+      <h3 id="etiquetas-html">
+        Etiquetas
+        <small><a href="#indice" title="Volver al Índice">↑</a></small>
+      </h3>
       <ul>
         <li>
           <strong>Strong</strong>: Se usa para marcar y resaltar texto
@@ -165,10 +201,45 @@
           agrupar bloques de contenidos en línea que necesitan estilos
           específicos
         </li>
+        <li>
+          Code: Representa un fragmento de código, a menudo de programación o
+          shell. Se debe usar para código, variables, funciones, palabras clave
+          de un lenguaje, etc.
+          <strong>Por ejemplo:</strong> <br />
+          Un <em>Hola Mundo</em> escrito en Python:
+          <code> print("Hola Mundo") </code>
+        </li>
+        <li>
+          Samp (Sample Out): Representa la salida de código de un programa,
+          comando, tarea o acción. Se debe usar para logs, mensajes de error,
+          salida de una operación matemática o todo lo que tenga que ver con una
+          salida informática de datos. <br />
+          Por ejemplo: <br />
+          Al ingresar <code>echo "Hola"</code> en una terminal, se te regreserá
+          <samp>Hola</samp>
+        </li>
+        <li>
+          Kbd (Keyboard Input): Representa la entrada y/o interacción del
+          usuario con el teclado aunque abarca cualquier tipo de entrada. Se
+          debe de usar para atajos de teclado o comandos que el usuario debe
+          ingresar en la terminal. <br />
+          Por ejemplo: Para guardar usa
+          <kbd><kbd>Ctrl</kbd> + <kbd>S</kbd></kbd>
+        </li>
+        <li>
+          Pre (Preformatted Text): Indica que el texto en su interior ya tiene
+          un formato predefinido, y que, todos los espacios en blanco y saltos
+          de línea <strong>deben respetarse</strong>. Casi siempre es usado
+          junto con <code>code</code> y <code>samp</code> para bloques de código
+          además de arte ASCII.
+        </li>
       </ul>
     </section>
     <section>
-      <h3>Enlaces Especiales</h3>
+      <h3 id="enlances-especiales-html">
+        Enlaces Especiales
+        <small><a href="#indice" title="Volver al Índice">↑</a></small>
+      </h3>
       <p>
         En HTML, hay pequeños elementos que podemos usar que van más allá del
         protocolo HTTP mediante un <strong>a href</strong>, como los que veremos

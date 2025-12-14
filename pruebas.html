@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Campo de Pruebas HTML</title>
+    <!-- ! Documento de pruebas - Para juzgar y probar cosas nuevas - No usar para producción -->
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Pruebas HTML</h1>
+      </header>
+      <section>
+        <h2>Formulario de Contacto</h2>
+
+        <form method="post" action="/">
+          <fieldset>
+            <legend>Información Personal</legend>
+
+            <div>
+              <label
+                >Nombre:
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Tu nombre"
+                  required
+                  pattern="^[a-zA-Z ]+$"
+                  title="Por favor, ingresa un nombre válido"
+                />
+              </label>
+            </div>
+            <!-- ? Pudimos haber utilizado style="display: block;" en el principio del label para estilar pero vamos a usar div -->
+            <!-- ? Para que un <label> y un <input> se puedan realizar a menudo se hace uso de un for="id-del-input" -->
+            <!-- ? Pero también se puede anidar el input dentro del label y este automáticamente se definirá para el label -->
+            <!-- * Cualquiera de las dos maneras es correcta, depende de ti elegir cuál te gusta más -->
+
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="tuemail@dominio.com"
+              required
+              pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+              title="Por favor, ingresa un correo electrónico válido"
+            />
+            <!-- ! El pattern es el que define el patrón que debe cumplir el input para que sea válido -->
+            <!-- ! El title es el mensaje que se muestra cuando el input no cumple con el patrón -->
+          </fieldset>
+
+          <fieldset>
+            <legend>Información Adicional</legend>
+            <div>
+              <label>
+                Celular:
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="Tu número telefónico"
+                  required
+                  pattern="[0-9]{10}"
+                  title="Por favor, ingresa un número de teléfono válido"
+                />
+              </label>
+              <!-- ? Required: Significa que el campo debe ser llenado obligatoriamente -->
+              <!-- ? Placeholder: Texto que aparecerá dentro del campo del input, funciona como una tipo leyenda para el usuario -->
+            </div>
+          </fieldset>
+
+          <input type="submit" value="Enviar Contacto" />
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
