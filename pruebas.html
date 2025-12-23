@@ -70,9 +70,47 @@
             </div>
           </fieldset>
 
-          <input type="submit" value="Enviar Contacto" />
+          <fieldset>
+            <legend>Otros</legend>
+            <div>
+              <label for="why"> ¿Por qué quieres contactar? </label>
+              <select name="why" id="why">
+                <option value="default">Selecciona una opción</option>
+                <option value="1">Trabajo</option>
+                <option value="2">Cuestiones Académicas</option>
+                <option value="3">Socialización</option>
+                <option value="4">Más Información</option>
+              </select>
+            </div>
+            <div>
+              <label for="terms">¿Aceptas los términos y condiciones?</label>
+              <input type="checkbox" name="terms" id="terms" required />
+            </div>
+            <div>
+              <datalist id="languages">
+                <option value="Rust"></option>
+                <option value="Python"></option>
+                <option value="HTML"></option>
+                <option value="CSS"></option>
+                <option value="JavaScript"></option>
+              </datalist>
+              <label>
+                Nos podemos ayudar, ¿qué lenguaje dominas?
+                <input list="languages" name="languages" />
+              </label>
+            </div>
+          </fieldset>
+          <button>Enviar Datos</button>
+          <!-- ? Todos los botones dentro de un formulario se consideran de tipo submit por lo que no es necesario especificarlo -->
+          <!--
+          ? Para que un botón sea un botón pero sin tipo submit debe escribirse como:
+          <button type="button">Botón</button>
+          -->
         </form>
       </section>
     </main>
   </body>
+  <footer>
+    <h4>Pie de página</h4>
+  </footer>
 </html>

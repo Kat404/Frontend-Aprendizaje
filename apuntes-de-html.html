@@ -18,7 +18,7 @@
           <a href="#atributos-booleanos">Atributos Booleanos</a>
           <a href="#case-sensitive-html">Case Sensitive en HTML</a>
           <a href="#etiquetas-html">Etiquetas</a>
-          <a href="#enlances-especiales-html">Enlaces Especiales</a>
+          <a href="#enlaces-especiales-html">Enlaces Especiales</a>
         </nav>
       </div>
       <h2 id="introduccion" title="Volver al Índice">
@@ -233,10 +233,73 @@
           junto con <code>code</code> y <code>samp</code> para bloques de código
           además de arte ASCII.
         </li>
+        <li>
+          Select: Permite ofrecer una lista de opciones desplegables para el
+          usuario, por ejemplo, se podría usar para definir las opciones que
+          tienen las personas para contactarte:
+          <pre>
+            <code>
+              < label for="contact">¿Cómo quieres contactarnos?</ label>
+              < select id="contact" name="contact">
+                < option value="trabajo">Trabajo</ option>
+                < option value="duda">Duda</ option>
+                < option value="mas_info">Más información</ option>
+              </ select>
+            </code>
+          </pre>
+        </li>
+        <li>
+          Datalist: Permite ofrecer una lista de opciones desplegables para el
+          usuario. Con <em>datalist</em> los usuarios pueden escribir y ver sugerencias automáticas basadas en lo que van escribiendo.
+          Por ejemplo, se podría usar para definir las opciones que
+          tienen las personas para contactarte:
+          <pre class="brush: html notranslate">
+            <code>
+              <label for="contact">¿Cómo quieres contactarnos?</label>
+              <input list="contact" name="contact">
+              <datalist id="contact">
+                <option value="trabajo">Trabajo</option>
+                <option value="duda">Duda</option>
+                <option value="mas_info">Más información</option>
+              </datalist>
+            </code>
+          </pre>
+        </li>
+        <li>
+          <strong>Details</strong>: Se usa para definir un elemento que puede ser desplegable o
+          no, por ejemplo, se podría usar para definir un elemento que
+          contiene información adicional que el usuario puede ver o no:
+          <pre>
+            <code>
+              < details>
+                < summary>¿Quieres contactarnos por email?</ summary>
+                < p>Por favor, envíanos un correo electrónico a
+                  < a href="mailto:emailgenerico@gmail.com">emailgenerico@gmail.com< /a>
+                </ p>
+              </ details>
+            </code>
+          </pre>
+        </li>
+        <li>
+          <strong>Summary</strong>: Define un resumen, cabecera o leyenda para el
+          contenido de un elemento <code>details</code>. Es la parte que permanece
+          siempre visible y sobre la cual el usuario hace clic para mostrar u
+          ocultar el resto de la información contenida en el <code>details</code>.
+          <pre>
+            <code>
+              < details>
+                < summary>¿Quieres contactarnos por email?</ summary>
+                < p>Por favor, envíanos un correo electrónico a
+                  < a href="mailto:emailgenerico@gmail.com">emailgenerico@gmail.com< /a>
+                </ p>
+              </ details>
+            </code>
+          </pre>
+        </li>
       </ul>
     </section>
     <section>
-      <h3 id="enlances-especiales-html">
+      <h3 id="enlaces-especiales-html">
         Enlaces Especiales
         <small><a href="#indice" title="Volver al Índice">↑</a></small>
       </h3>

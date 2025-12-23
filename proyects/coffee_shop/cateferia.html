@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<!-- ! Definimos que estamos trabajando en un documento HTML, además de definir su versión -->
+<html lang="es_MX">
+  <!-- * Damos inicio a nuestro "código" HTML, además de definir el idioma que es español -->
+  <head>
+    <link href="/css/styles.css" rel="stylesheet" />
+    <!-- ? Hacemos el "link" entre nuestro página HTML y la hoja de estilos "styles.css" que está en la carpeta "css" -->
+    <!-- ? De momento no tendremos nada en nuestro "styles.css" pero nos sirve para más adelante que aprendamos CSS -->
+    <meta charset="UTF-8" />
+    <!-- ! Definimos los metacaracteres que se usarán en la página de la cafetería, UTF-8 es el más popular y común -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- * Definimos el viewport, esto hará que la página se adapte al ancho del dispositivo, útil en celulares -->
+    <meta name="robots" content="index, follow" />
+    <!--
+    ! Esencial para el SEO: Le dice a los motores de búsqueda cómo debe actuar ante el contenido de la página
+    ? index: Le dice al buscador que tiene permiso para indexar la página en su base de datos, si está indexada, puede aparecer en los resultados de búsqueda
+    ? follow: Le indica al buscador que debe rastrear y dar validez a los enlances que encuentre dentro de la página
+    ? No es "necesario" ponerlo pero es esencial por: Claridad, mantenimiento y control de cambios
+    Por ejemplo:
+    -> noindex, follow: No anexa la página a los resultados de búsqueda pero sí sigue los enlaces que hay en ella, útil para páginas de archivos o categorías
+    -> index, nofollow: Indexa la página a los resultados de búsqueda pero no sigue ningún enlace interno/externo
+    -> noindex, nofollow: Ignora completamente esta página y sus enlaces, común en paneles de administración y/o zonas privadas
+    -->
+    <title>
+      Coffee Hub - El mejor lugar para disfrutar del café a un precio sin
+      cafeína
+    </title>
+    <!-- * Definimos un título corto pero atractivo y directo sobre nuestra cafetería -->
+    <meta
+      name="description"
+      content="¡Descubre Coffee Hub! - El lugar perfecto para disfrutar de un tiempo relajante y agradable acompañado de una buena taza de café artesanal a un precio sin cafeína"
+    />
+    <!--
+    ! Añadimos una buena descripción a nuestra página web, extendiendo aún más el propósito y objetivo de la cafetería
+    * Esta es una de las partes más importantes, ya que se lleva la mayor parte del SEO y atractivo de la página
+    -->
+    <meta
+      name="keywords"
+      content="café, coffee, cafetería, buen café, cafetería buena"
+    />
+    <!-- * Añadimos palabras clave, actualmente no son tan esenciales para el SEO pero pueden llegar a ser útiles -->
+    <link rel="icon" type="image/png" href="../images/cafe.png" />
+    <!-- ? Definimos el favicon de nuestra página, este será la imagen que saldrá en la pestaña cuando el usuario abra la página -->
+    <meta
+      property="og:title"
+      content="Coffee Hub - El mejor lugar para disfrutar del café a un precio sin cafeína"
+    />
+    <meta
+      property="og:description"
+      content="Descubre Coffee Hub, el lugar perfecto para disfrutar de un tiempo relajante y agradable acompañado de una buena taza de café artesanal a un precio sin cafeína"
+    />
+    <meta property="og:image" content="../images/cafe.png" />
+    <meta
+      property="og:url"
+      content="https://kat404.github.io/FrontEnd-Aprendizaje/proyects/coffee_shop/cateferia.html"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_MX" />
+    <!--
+    * Open Graph: Optimización de nuestro sitio para Redes Sociales
+    ? og:title -> Define el título que aparecerá cuando compartamos la página web a través de una red social
+    ? og:description -> Define la descripción que aparecerá debajo del título en la tarjeta social
+    ? og:image -> Define la imagen (thumbnail) que se mostrará al compartir el enlace
+    ? og:url -> Define la URL "canónica" o dirección oficial de nuestro sitio web
+    ? og:type -> Indica el tipo de nuestro contenido (website, article, etc.)
+    ? og:locale -> Define el idioma y la localización del contenido (ej: es_MX para español de México)
+    -->
+  </head>
+  <body>
+    <header id="titulo-principal">
+      <h1>Coffee Hub</h1>
+      <!-- ! Título de nuestra cafetería -->
+      <nav id="indice" role="navigation">
+        <a href="#inicio">Inicio</a>
+        <a href="#sobre-nosotros">Sobre Nosotros</a>
+        <a href="#menu">Menú</a>
+        <a href="#contacto">Contacto</a>
+        <a href="#pie-de-pagina">Créditos</a>
+      </nav>
+      <!-- * Barra de navegación, esencial para dirigir rápidamente al usuario a puntos importantes del contenido -->
+    </header>
+    <main>
+      <!-- * Con <main> definimos todo el contenido principal de la página -->
+      <section id="inicio">
+        <!-- ! Sección Inicio -->
+        <header>
+          <!-- ? Con <header> definimos cuál es el título principal de nuestra sección, además de remarcarlo con un <h2> -->
+          <h2>
+            Un lugar revolucionario para <s>tomar</s> disfrutar verdaderamente
+            del café
+          </h2>
+        </header>
+        <div>
+          <!-- ? Con <div> dividimos el contenido mediante bloques, los cuales podemos estilizar luego con CSS además de que nos proporcionan un salto de línea -->
+          <p>
+            Bienvenido a <strong>Coffe Hub</strong>, un lugar innovador donde se
+            puede disfrutar de un buen café, tanto en solitario como en compañía
+            a un precio sin cafeína.
+          </p>
+        </div>
+        <div>
+          <p>¿Qué nos distingue? Nuestras mejores cualidades son:</p>
+        </div>
+        <details>
+          <!-- * Con <details> señalamos que es una sección "sorpresa", este elemento se puede ver mucho en Wikipedia -->
+          <summary>Un lugar tranquilo, pacífico y sin <em>ruido</em></summary>
+          <!-- ? Con <summary> definimos el título de nuestro caja "sorpresa" -->
+          <p>
+            <!-- ? Con <p> definimos todo el contenido sorpresa que veremos que descubra el usuario -->
+            Contamos con un lugar acondicionado de manera que, nuestro clientes
+            puedan disfrutar de una experiencia innovadora para disfrutar de su
+            café y poder relajarse luego de un gran día de ajetreo y estrés.
+          </p>
+        </details>
+        <details>
+          <summary>Perfecto para introvertidos y extrovertidos</summary>
+          <p>
+            En nuestro local contamos con varias dinámicas, adaptas a diferentes
+            personas para diferentes gustos y necesidades. <br />
+            Puedes pedir tu café y aperitivos mediante:
+          </p>
+          <ul>
+            <!-- ? También podemos poner listas y demás elementos para nuestra caja "sorpresa" -->
+            <li>Acceder presencialmente al mostrador</li>
+            <li>
+              Acceder a una de nuestras máquinas de auto-orden, perfecto si
+              prefieres atender a ti mismo, se puede pagar tanto en efectivo
+              como con tarjeta.
+            </li>
+          </ul>
+        </details>
+        <details>
+          <summary>Un precio sin <strong>cafeína</strong></summary>
+          <p>
+            En Coffee Hub nos distinguimos no solo por nuestras diferentes
+            modalidades y perfeccionamiento de nuestros locales, si no que,
+            también proveemos los mejores precios de la zona, siendo altamente
+            competitivos en nuestros precios, siempre dando un trato justo a
+            nuestro clientes, que son lo más importante para nosotros.
+          </p>
+        </details>
+        <!-- TODO: Agregar la etiqueta <figure> y <figcaption> para poder completar todo el mini proyecto -->
+      </section>
+      <section id="sobre-nosotros">
+        <!-- ! Sección Sobre Nosotros -->
+        <header>
+          <h2>Sobre Nosotros</h2>
+        </header>
+        <article>
+          <!-- * Con <article> queremos conseguir marcar un artículo dentro de nuestra página -->
+          <!-- ? Es ideal para diseñar contenido informativo-independiente dentro de la página -->
+          <header>Es una historia bastante curiosa...</header>
+          <div>
+            <p>
+              Somos un pequeño grupo de jóvenes amantes del café y de su pequeño
+              ritual: sentarte, disfrutar del café y relajarte. Con eso en mente
+              nos propusimos armar algo único, algo que no solo fuera una
+              cafetería cualquier, algo del montón, si no que, quisimos llevar
+              la experiencia del café al siguiente nivel, algo que nadie más
+              haya hecho antes.
+            </p>
+          </div>
+          <div>
+            <p>
+              Déjame presentarme, soy <strong>José</strong> y a mi lado están
+              unos chicos increíbles: <strong>Julián</strong> y
+              <strong>Daniel</strong>. Bajo este equipo decidimos fundar
+              <em>Coffee Hub</em>, un lugar donde se revoluciona la experiencia
+              del disfrute del café, un lugar único e inigualable.
+            </p>
+          </div>
+          <div>
+            <p>
+              Con esto en mente nos pusimos en marcha, tratando de reunir lo que
+              más busca la gente y lo que mejor se adapte a nuestros clientes, y
+              aunque haya sido "difícil", fue muy fácil a la vez, con nuestra
+              fórmula de: <br />
+              Tranquilidad, espacio, comfort, atención y precio. <br />
+              Eso era todo lo que necesitábamos para poder empezar con esta gran
+              y grata experiencia.
+            </p>
+            <p>
+              Nos distinguimos por nuestro eslogan:
+              <quote
+                ><em
+                  >"El mejor lugar para disfrutar del café a un precio sin
+                  cafeína"</em
+                ></quote
+              >
+            </p>
+          </div>
+        </article>
+        <!-- TODO: Agregar el <blockquote> y el <cite> simbolizando reseñas de clientes con su nombre -->
+      </section>
+      <section id="menu">
+        <!-- ! Sección Menú -->
+        <header>
+          <h2>Menú</h2>
+        </header>
+        <p>
+          Bienvenido a nuestro menú, lugar donde podrás encontrar todas nuestras
+          deliciosas culinarias como nuestras crepas y pasteles, pero, yo sé a
+          qué veniste, al <strong>café</strong>, ¿no es así? ¡Échale un vistazo!
+        </p>
+        <table>
+          <header>
+            <h3>Carta de Menú</h3>
+          </header>
+          <tr>
+            <!-- TODO: Revisar cuidadosamente la forma correcta de integración de los <thead>, <tbody> y <tfoot> -->
+            <!-- TODO: Realizar la sección de Postres mediante <dl>, <dt>, y <dd> -->
+            <thead>
+              <th>Producto</th>
+              <th>Descripción</th>
+              <th>Precio</th>
+            </thead>
+          </tr>
+        </table>
+      </section>
+      <section id="ubicacion">
+        <!-- ! Sección Ubicación -->
+        <header>
+          <h2>Ubicación</h2>
+        </header>
+        <p>
+          ¿Listo para adentrarte a esta nueva experiencia? Lo podrás cumplir
+          entrando a nuestra primera y principal sucursal:
+        </p>
+        <address>
+          Calle Principal N°14, Colonia Centro, Ciudad de México
+        </address>
+        <!-- ? Ubicación falsa, únicamente con propósitos educativos, con posibilidad de cambio para añadir el mapa -->
+        <!-- TODO: Poner el <iframe> de algún mapa (Google u OpenMaps) de la ubicación, con el propósito de facilitar el acceso y ruta al usuario interesado -->
+      </section>
+      <section id="contacto">
+        <!-- ! Sección Contacto -->
+        <header>
+          <h2>Contacto</h2>
+        </header>
+        <p>
+          ¿Te gustaría reservar un lugar para esas ocasiones especiales? <br />
+          Rellena tu información en este formulario para agendar tu reservación
+        </p>
+        <form method="post" action="/">
+          <fieldset id="informacion-personal">
+            <legend>Información Personal</legend>
+
+            <div>
+              <label>
+                Nombre:
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Nombre del anfitrión"
+                  required
+                  pattern="^[a-zA-Z ]+$"
+                  title="Por favor, ingresa un nombre válido"
+                />
+              </label>
+            </div>
+            <div>
+              <label>
+                Email:
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Correo del anfitrión"
+                  required
+                  pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                  title="Por favor, ingresa un correo válido"
+                />
+              </label>
+            </div>
+          </fieldset>
+          <fieldset id="informacion-reservacion">
+            <legend>Información de Reservación</legend>
+            <div>
+              <label>
+                Número de personas:
+                <input
+                  type="number"
+                  id="people"
+                  name="people"
+                  placeholder="Número de personas"
+                  required
+                  min="0"
+                  max="10"
+                  title="Por favor, ingresa un número de personas válido"
+                />
+              </label>
+            </div>
+            <div>
+              <label>
+                Fecha y Hora:
+                <input
+                  type="datetime-local"
+                  id="time"
+                  name="time"
+                  placeholder="Fecha para la Reservación"
+                  required
+                  title="Por favor, ingresa una fecha válida"
+                />
+              </label>
+            </div>
+            <div>
+              <label for="table-preference"> Preferencia de Mesa: </label>
+              <select id="table-preference" name="table-preference" required>
+                <!-- TODO: Descubrir la funcionalidad del <optgroup> -->
+                <!-- TODO: Descubrir cómo forzar al usuario a elegir una opción, y no aceptar que se quede en el valor "default" -->
+                <option value="default">Selecciona una opción</option>
+                <option value="op-1">Interior</option>
+                <option value="op-2">Terraza</option>
+                <option value="op-3">Bar</option>
+              </select>
+            </div>
+            <div>
+              <label for="terms"
+                >¿Aceptas la Política de Privacidad y los Términos y
+                Condiciones?</label
+              >
+              <!-- TODO: Hacer página de política de privacidad y términos y condiciones, importante dentro del mundo digital -->
+              <input type="checkbox" id="terms" name="terms" required />
+            </div>
+          </fieldset>
+          <button>Enviar Datos de Reservación</button>
+        </form>
+      </section>
+    </main>
+    <footer id="pie-de-pagina">
+      <!-- ? Definimos el pie de página, comúnmente utilizado para enlaces utilitarios, créditos y copyright -->
+      <header>
+        <h5>
+          Página Web de Coffe Hub 2025 &copy; <br />
+          Cortersía de
+          <a
+            href="https://github.com/Kat404"
+            target="_blank"
+            title="Creador de la Página Web"
+            >José Luis</a
+          >
+          <a href="#titulo-principal" title="Volver al Inicio">↑</a>
+        </h5>
+      </header>
+    </footer>
+  </body>
+</html>
