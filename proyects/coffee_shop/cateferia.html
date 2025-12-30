@@ -3,7 +3,7 @@
 <html lang="es_MX">
   <!-- * Damos inicio a nuestro "código" HTML, además de definir el idioma que es español -->
   <head>
-    <link href="/css/styles.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
     <!-- ? Hacemos el "link" entre nuestro página HTML y la hoja de estilos "styles.css" que está en la carpeta "css" -->
     <!-- ? De momento no tendremos nada en nuestro "styles.css" pero nos sirve para más adelante que aprendamos CSS -->
     <meta charset="UTF-8" />
@@ -39,7 +39,7 @@
       content="café, coffee, cafetería, buen café, cafetería buena"
     />
     <!-- * Añadimos palabras clave, actualmente no son tan esenciales para el SEO pero pueden llegar a ser útiles -->
-    <link rel="icon" type="image/png" href="../images/cafe.png" />
+    <link rel="icon" type="image/png" href="images/cafe.png" />
     <!-- ? Definimos el favicon de nuestra página, este será la imagen que saldrá en la pestaña cuando el usuario abra la página -->
     <meta
       property="og:title"
@@ -67,13 +67,14 @@
     -->
   </head>
   <body>
-    <header id="titulo-principal">
+    <header id="titulo-principal" class="hidden">
       <h1>Coffee Hub</h1>
       <!-- ! Título de nuestra cafetería -->
       <nav id="indice" role="navigation">
         <a href="#inicio">Inicio</a>
         <a href="#sobre-nosotros">Sobre Nosotros</a>
         <a href="#menu">Menú</a>
+        <a href="#ubicacion">Ubicación</a>
         <a href="#contacto">Contacto</a>
         <a href="#pie-de-pagina">Créditos</a>
       </nav>
@@ -81,7 +82,7 @@
     </header>
     <main>
       <!-- * Con <main> definimos todo el contenido principal de la página -->
-      <section id="inicio">
+      <section id="inicio" class="hidden">
         <!-- ! Sección Inicio -->
         <header>
           <!-- ? Con <header> definimos cuál es el título principal de nuestra sección, además de remarcarlo con un <h2> -->
@@ -113,7 +114,7 @@
           </p>
         </details>
         <details>
-          <summary>Perfecto para introvertidos y extrovertidos</summary>
+          <summary>Perfecto para cualquier tipo de persona</summary>
           <p>
             En nuestro local contamos con varias dinámicas, adaptas a diferentes
             personas para diferentes gustos y necesidades. <br />
@@ -139,9 +140,12 @@
             nuestro clientes, que son lo más importante para nosotros.
           </p>
         </details>
-        <!-- TODO: Agregar la etiqueta <figure> y <figcaption> para poder completar todo el mini proyecto -->
+        <figure>
+          <img src="images/expreso.jpg" alt="Expreso especial de La Casa" width="150">
+          <figcaption>Atrévete a probar nuestro expresso especial, especialmente elaborado y refinado para nuestro clientes</figcaption>
+        </figure>
       </section>
-      <section id="sobre-nosotros">
+      <section id="sobre-nosotros" class="hidden">
         <!-- ! Sección Sobre Nosotros -->
         <header>
           <h2>Sobre Nosotros</h2>
@@ -181,18 +185,32 @@
             </p>
             <p>
               Nos distinguimos por nuestro eslogan:
-              <quote
+              <blockquote
                 ><em
                   >"El mejor lugar para disfrutar del café a un precio sin
                   cafeína"</em
-                ></quote
+                ></blockquote
               >
             </p>
           </div>
+          <div id="reseñas">
+            <p>¿No estás seguro sobre visitarnos? ¡Ve aquí unas reseñas de nuestros clientes!</p>
+            <blockquote>
+              "Desde que descubrí <em>Coffe Hub</em> cualquier otra cafetería se queda por debajo, el nivel de tranquilidad es <strong>incomparable</strong>"
+              <footer>
+                - <cite>Alejandro Gallegos</cite>
+              </footer>
+            </blockquote>
+            <blockquote>
+              "El nivel de atención y cuidado al establecimiento es <strong>demasiado bueno</strong>, pareciera que realmente puede cumplir con una mejor experiencia sobre el café"
+              <footer>
+                - <cite>Rogelio Orozco</cite>
+              </footer>
+            </blockquote>
+          </div>
         </article>
-        <!-- TODO: Agregar el <blockquote> y el <cite> simbolizando reseñas de clientes con su nombre -->
       </section>
-      <section id="menu">
+      <section id="menu" class="hidden">
         <!-- ! Sección Menú -->
         <header>
           <h2>Menú</h2>
@@ -206,18 +224,48 @@
           <header>
             <h3>Carta de Menú</h3>
           </header>
-          <tr>
-            <!-- TODO: Revisar cuidadosamente la forma correcta de integración de los <thead>, <tbody> y <tfoot> -->
-            <!-- TODO: Realizar la sección de Postres mediante <dl>, <dt>, y <dd> -->
             <thead>
-              <th>Producto</th>
-              <th>Descripción</th>
-              <th>Precio</th>
+              <tr>
+                <th>Producto</th>
+                <th>Descripción</th>
+                <th>Precio</th>
+              </tr>
             </thead>
-          </tr>
+            <tbody>
+              <tr>
+                <td>Americano</td>
+                <td>Un clásico café americano con toda la esencia de nuestro granos selectos de café</td>
+                <td>$45MXN</td>
+              </tr>
+              <tr>
+                <td>Cappuccino</td>
+                <td>Un rico cappuccino con la esencia de la leche con el café, disfrutando de una experiencia semidulce con una buena cremosidad encima</td>
+                <td>$50MXN</td>
+              </tr>
+              <tr>
+                <td>Pan Dulce</td>
+                <td>Una buena pieza de pan para acompañar al café de tu elección, perfecto para complementar toda tu experiencia en Coffe Hub</td>
+                <td>$15MXN</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td></td>
+                <td>Cualquier duda o preguntas puedes preguntar al mesero</td>
+                <td>Todos nuestros precio incluyen IVA</td>
+              </tr>
+            </tfoot>
         </table>
+        <h3>Nuestros Postres</h3>
+        <dl>
+          <dt>Pastel de Zanahoria</dt>
+          <dd>Rebanada con trozos de zanahorira de glaseado como decoración - $40MXN</dd>
+
+          <dt>Helado Artesanal</dt>
+          <dd>Delicioso helado elaborado por nosotros, contamos con diferentes sabores: vainilla, chocolate y fresa - $35MXN</dd>
+        </dl>
       </section>
-      <section id="ubicacion">
+      <section id="ubicacion" class="hidden">
         <!-- ! Sección Ubicación -->
         <header>
           <h2>Ubicación</h2>
@@ -227,12 +275,12 @@
           entrando a nuestra primera y principal sucursal:
         </p>
         <address>
-          Calle Principal N°14, Colonia Centro, Ciudad de México
+          Calle Aristóteles N°207, Polanco 4ª Sección, Miguel Hidalgo, Ciudad de México
+          <iframe width="400" height="325" src="https://www.openstreetmap.org/export/embed.html?bbox=-99.19460445642473%2C19.433192363042735%2C-99.19278055429461%2C19.43469229254802&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/?#map=19/19.433942/-99.193693">Ver el mapa más grande</a></small>
         </address>
         <!-- ? Ubicación falsa, únicamente con propósitos educativos, con posibilidad de cambio para añadir el mapa -->
-        <!-- TODO: Poner el <iframe> de algún mapa (Google u OpenMaps) de la ubicación, con el propósito de facilitar el acceso y ruta al usuario interesado -->
       </section>
-      <section id="contacto">
+      <section id="contacto" class="hidden">
         <!-- ! Sección Contacto -->
         <header>
           <h2>Contacto</h2>
@@ -241,10 +289,9 @@
           ¿Te gustaría reservar un lugar para esas ocasiones especiales? <br />
           Rellena tu información en este formulario para agendar tu reservación
         </p>
-        <form method="post" action="/">
+        <form method="post" action="/proyects/coffee_shop/cateferia.html">
           <fieldset id="informacion-personal">
             <legend>Información Personal</legend>
-
             <div>
               <label>
                 Nombre:
@@ -254,7 +301,7 @@
                   name="name"
                   placeholder="Nombre del anfitrión"
                   required
-                  pattern="^[a-zA-Z ]+$"
+                  pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+$"
                   title="Por favor, ingresa un nombre válido"
                 />
               </label>
@@ -285,7 +332,7 @@
                   name="people"
                   placeholder="Número de personas"
                   required
-                  min="0"
+                  min="1"
                   max="10"
                   title="Por favor, ingresa un número de personas válido"
                 />
@@ -293,34 +340,51 @@
             </div>
             <div>
               <label>
-                Fecha y Hora:
+                Fecha:
                 <input
-                  type="datetime-local"
-                  id="time"
-                  name="time"
+                  type="date"
+                  id="date"
+                  name="date"
                   placeholder="Fecha para la Reservación"
                   required
                   title="Por favor, ingresa una fecha válida"
+                />
+              </label>
+              <label>
+                Hora:
+                <input
+                  type="time"
+                  id="time"
+                  name="time"
+                  placeholder="Hora para la Reservación"
+                  required
+                  title="Por favor, ingresa una hora válida"
                 />
               </label>
             </div>
             <div>
               <label for="table-preference"> Preferencia de Mesa: </label>
               <select id="table-preference" name="table-preference" required>
-                <!-- TODO: Descubrir la funcionalidad del <optgroup> -->
-                <!-- TODO: Descubrir cómo forzar al usuario a elegir una opción, y no aceptar que se quede en el valor "default" -->
-                <option value="default">Selecciona una opción</option>
-                <option value="op-1">Interior</option>
-                <option value="op-2">Terraza</option>
-                <option value="op-3">Bar</option>
+                <option value="" disabled selected>Selecciona una opción</option>
+                <!-- * Mediante value="" y disabled selected podemos omitir la opción para que el usuario no pueda seleccionarla-->
+                <optgroup label="Interior">
+                  <!-- ? Mediante label podemos agregar un título al grupo, el cual el usuario podrá ver y facilitar más su UX -->
+                  <option value="op-1">Mesa Común</option>
+                  <option value="op-2">Bar</option>
+                </optgroup>
+                <optgroup label="Exterior">
+                  <!-- ? Igualmente podemos agregar más grupos y opciones, en este caso Exterior -->
+                  <option value="op-3">Terraza</option>
+                  <option value="op-4">Techo</option>
+                </optgroup>
               </select>
             </div>
             <div>
               <label for="terms"
-                >¿Aceptas la Política de Privacidad y los Términos y
-                Condiciones?</label
+                >¿Aceptas la <a href="tyc.html" target="_blank">Política de Privacidad y los Términos y
+                Condiciones</a>?</label
               >
-              <!-- TODO: Hacer página de política de privacidad y términos y condiciones, importante dentro del mundo digital -->
+              <!-- ? Redirigimos al usuario a la página de los Términos y Condiciones al hacer clic en el texto enlazado -->
               <input type="checkbox" id="terms" name="terms" required />
             </div>
           </fieldset>
@@ -331,8 +395,8 @@
     <footer id="pie-de-pagina">
       <!-- ? Definimos el pie de página, comúnmente utilizado para enlaces utilitarios, créditos y copyright -->
       <header>
-        <h5>
-          Página Web de Coffe Hub 2025 &copy; <br />
+        <h4>
+          Página Web de Coffee Hub 2025 &copy; <br />
           Cortersía de
           <a
             href="https://github.com/Kat404"
@@ -341,8 +405,31 @@
             >José Luis</a
           >
           <a href="#titulo-principal" title="Volver al Inicio">↑</a>
-        </h5>
+        </h4>
+        <p>
+          Redes Sociales:
+          <a href="https://instagram.com/coffeehub" target="_blank" title="Instagram de Coffee Hub">Instagram</a>
+          <a href="https://twitter.com/coffeehub" target="_blank" title="Twitter de Coffee Hub">Twitter</a>
+          <a href="https://facebook.com/coffeehub" target="_blank" title="Facebook de Coffee Hub">Facebook</a>
+        </p>
       </header>
     </footer>
+    <!-- * Disclaimer: Script realizado usando IA -->
+    <script>
+      // Script para Scroll Reveal
+      // Detecta cuando los elementos entran en pantalla y les pone la clase 'show'
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          console.log(entry)
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show'); 
+          } 
+        });
+      });
+
+      // Seleccionamos todos los elementos con la clase 'hidden'
+      const hiddenElements = document.querySelectorAll('.hidden');
+      hiddenElements.forEach((el) => observer.observe(el));
+    </script>
   </body>
 </html>

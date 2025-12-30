@@ -1,0 +1,553 @@
+/* 
+  IA: ¡Bienvenido a tu primer tutorial práctico de CSS! 
+  
+  CSS (Cascading Style Sheets) es lo que usamos para darle vida, color y forma a nuestro HTML.
+  HTML es el esqueleto, CSS es la ropa y el maquillaje.
+
+  ESTRUCTURA DE UNA REGLA CSS:
+  selector {
+    propiedad: valor;
+  }
+*/
+
+/* 
+  1. SELECTOR UNIVERSAL (*)
+  Selecciona TODOS los elementos de la página.
+  Es buena práctica "resetear" los márgenes y rellenos por defecto de los navegadores para tener control total.
+*/
+* {
+  margin: 0; /* Elimina espacio exterior por defecto */
+  padding: 0; /* Elimina espacio interior por defecto */
+  box-sizing: border-box; /* Asegura que el padding y borde no aumenten el tamaño total de los elementos */
+}
+
+/* 
+  2. VARIABLES CSS (:root)
+  Aquí definimos colores y valores que usaremos en toda la página. 
+  Si quieres cambiar el color principal, solo lo cambias aquí y se actualiza en todos lados.
+*/
+:root {
+  --color-principal: #6f4e37; /* Un marrón café */
+  --color-secundario: #f5f5dc; /* Un beige suave */
+  --color-texto: #333333; /* Gris oscuro para el texto, cansa menos la vista que el negro total */
+  --color-fondo: #faf0e6; /* Lino, un fondo cálido */
+  --color-acento: #d2691e; /* Chocolate, para destacar cosas */
+  --fuente-principal: "Ubuntu", sans-serif; /* Tipografía básica */
+  /* ANIMACIONES GLOBALES */
+  --transicion-suave: all 0.3s ease-in-out;
+}
+
+/* 
+  ANIMACIONES (Keyframes)
+  Definimos los movimientos que pueden hacer los elementos.
+*/
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px); /* Empieza abajo e invisible */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Termina en su sitio y visible */
+  }
+}
+
+/* Clases para Scroll Reveal (usadas con JS) */
+.hidden {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Transición suave cuando se le quite la clase */
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 
+  3. SELECTORES DE ETIQUETA (body, h1, p, etc.)
+  Afectan a todas las etiquetas de ese tipo en la página.
+*/
+
+body {
+  font-family: var(--fuente-principal); /* Usamos la variable de fuente */
+  background-color: var(--color-fondo); /* Usamos la variable de fondo */
+  color: var(--color-texto); /* Usamos la variable de texto */
+  line-height: 1.6; /* Altura de línea para mejorar la legibilidad */
+  padding-bottom: 50px; /* Un poco de espacio al final de la página */
+}
+
+/* Contenedor principal para centrar el contenido y que no se pegue a los bordes en pantallas gigantes */
+main {
+  max-width: 1200px; /* Ancho máximo */
+  margin: 0 auto; /* Centrado horizontal automático */
+  padding: 20px;
+}
+
+/* 
+  HEADERS (h1, h2, h3...)
+  Estilizamos los títulos para que destaquen.
+*/
+h1,
+h2,
+h3 {
+  color: var(--color-principal);
+  font-weight: bold;
+  text-align: center; /* Centrar texto */
+  margin-bottom: 1rem; /* Espacio debajo del título (1rem = tamaño de letra base, usualmente 16px) */
+}
+
+h1 {
+  font-size: 3rem; /* Título muy grande */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra suave para darle profundidad */
+  margin-top: 20px;
+}
+
+h2 {
+  font-size: 2rem; /* Título grande */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+h3 {
+  font-size: 1.5rem; /* Título mediano */
+}
+
+/* 
+  Estilo para el texto tachado (<s>)
+  Personalizamos la línea para que sea más gruesa y del color de acento.
+*/
+s {
+  text-decoration: line-through;
+  text-decoration-color: var(--color-acento); /* Color chocolate llamativo */
+  text-decoration-thickness: 3px; /* Más gordito */
+}
+
+/* 
+  4. SELECTORES DE ID (#nombre) -> Para elementos únicos
+  Usamos el ID 'indice' que definiste en el <nav>
+*/
+#indice {
+  background-color: var(--color-principal);
+  /* padding: 15px;  <- Quitamos el padding del contenedor */
+  text-align: center;
+  position: sticky; /* ¡Truco! Se queda pegado arriba al hacer scroll */
+  top: 0;
+  z-index: 1000; /* Asegura que se vea por encima de otros elementos */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombrita abajo */
+
+  display: flex; /* Usamos Flexbox para distribuir los enlaces */
+}
+
+/* 
+  Estilo para los enlaces (<a>) DENTRO del #indice
+  Selector descendente: #indice a
+*/
+#indice a {
+  color: var(--color-secundario);
+  text-decoration: none; /* Quita el subrayado típico de los links */
+
+  /* Hacemos que cada enlace sea un bloque clickeable */
+  flex: 1; /* Cada enlace toma el mismo ancho disponible */
+  display: block; /* Se comporta como una caja */
+  padding: 15px 0; /* El relleno lo ponemos AQUÍ para que sea clickeable */
+
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: all 0.3s ease; /* Suaviza todos los cambios (color y fondo) */
+}
+
+#contacto p {
+  text-align: center;
+}
+
+/* 
+  PSEUDO-CLASES (:hover)
+  Define qué pasa cuando pasas el mouse por encima.
+*/
+#indice a:hover {
+  color: #fff;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.1
+  ); /* Cambiamos el fondo al pasar el mouse */
+  text-decoration: none;
+}
+
+/* 
+  SECCIONES (section)
+  Damos espacio entre cada sección para que respiren.
+*/
+section {
+  background-color: white;
+  margin: 30px 0;
+  padding: 30px;
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Sombra suave tipo tarjeta */
+}
+
+/* 
+  IMÁGENES (img, figure)
+*/
+figure {
+  text-align: center; /* Centra la imagen y el pie de foto */
+  margin: 20px 0;
+  padding: 10px;
+  border: 1px dashed var(--color-principal); /* Borde punteado decorativo */
+}
+
+img {
+  max-width: 100%; /* La imagen nunca será más ancha que su contenedor */
+  height: auto; /* Mantiene la proporción */
+  border-radius: 5px;
+}
+
+figcaption {
+  font-style: italic;
+  font-size: 0.9rem;
+  margin-top: 5px;
+  color: #666;
+}
+
+/* 
+  DETALLES (details/summary)
+  Estilizando las cajas "sorpresa".
+*/
+details {
+  background-color: var(--color-secundario);
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border-left: 5px solid var(--color-principal); /* Borde grueso a la izquierda */
+  cursor: pointer; /* Cambia el cursor a manita */
+  transition: all 0.3s ease; /* Suaviza las animaciones */
+}
+
+details:hover {
+  background-color: #f0e6d2; /* Un poquito más oscuro para feedback */
+  transform: translateX(5px); /* Se mueve ligeramente a la derecha */
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* Resalta un poco */
+}
+
+summary {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: var(--color-principal);
+}
+
+details p {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+details ul {
+  margin-top: 10px;
+  padding-left: 40px; /* Recuperamos el espacio para las viñetas */
+}
+
+/* 
+  TABLAS (table)
+  Para el menú.
+*/
+table {
+  width: 100%;
+  border-collapse: collapse; /* Elimina espacios entre celdas */
+  margin-top: 20px;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd; /* Línea divisoria abajo de cada fila */
+}
+
+th {
+  background-color: var(--color-principal);
+  color: white;
+}
+
+tr:hover {
+  background-color: #f1f1f1; /* Efecto al pasar el mouse por una fila */
+}
+
+/* 
+  POSTRES (dl, dt, dd)
+  Lista de descripción para los postres.
+*/
+dl {
+  background-color: var(--color-secundario);
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid var(--color-principal);
+  margin-top: 20px;
+}
+
+dt {
+  font-weight: bold;
+  color: var(--color-acento);
+  font-size: 1.1rem;
+  margin-top: 15px;
+  border-bottom: 1px dashed #ccc;
+  padding-bottom: 5px;
+}
+
+dt:first-of-type {
+  margin-top: 0;
+}
+
+dd {
+  margin-left: 0;
+  margin-bottom: 15px;
+  color: #555;
+  font-style: italic;
+  padding-top: 5px;
+}
+
+/* 
+  FORMULARIOS (form)
+  Estilizando los campos de entrada.
+*/
+form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+fieldset {
+  border: 2px solid var(--color-principal);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #fffaf0; /* Fondo muy clarito */
+}
+
+legend {
+  font-weight: bold;
+  color: var(--color-acento);
+  padding: 0 10px;
+}
+
+label {
+  display: block; /* Cada label en su propia línea */
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="datetime-local"],
+select {
+  width: 100%; /* Ocupan todo el ancho disponible */
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: var(--transicion-suave); /* Animación suave al enfoque */
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: var(--color-acento);
+  box-shadow: 0 0 8px rgba(210, 105, 30, 0.3); /* Resplandor color chocolate */
+  transform: scale(1.01); /* Crece un poquito */
+}
+
+/* Botón de envío */
+button {
+  background-color: var(--color-acento);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+  transition: transform 0.1s;
+}
+
+button:hover {
+  background-color: #a0522d; /* Color un poco más oscuro */
+}
+
+button:active {
+  transform: scale(0.98); /* Efecto de presionar */
+}
+
+/* 
+  CHECKBOX TÉRMINOS
+  Alineamos el checkbox y el texto usando Flexbox.
+  Usamos un selector específico para el contenedor del checkbox.
+*/
+#informacion-reservacion div:last-of-type {
+  display: flex;
+  align-items: center; /* Centrado vertical */
+  justify-content: center; /* Centrado horizontal */
+  flex-direction: row-reverse; /* ¡Truco! Pone el checkbox a la izquierda del texto */
+  gap: 10px; /* Espacio entre ellos */
+  margin-top: 15px;
+}
+
+label[for="terms"] {
+  display: inline; /* Quitamos el display: block que afectaba a todos los labels */
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: left;
+  cursor: pointer; /* Hace que el texto también sea clickeable */
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: var(
+    --color-acento
+  ); /* Cambia el color azul por defecto al de la marca */
+}
+
+button:active {
+  transform: scale(0.98); /* Efecto de presionar */
+}
+
+/* 
+  RESEÑAS (#reseñas, blockquote)
+  Diseño de tarjetas para los testimonios.
+*/
+#reseñas {
+  display: flex; /* Usamos Flexbox para alinear las cosas */
+  flex-wrap: wrap; /* Permite que bajen de línea si no caben */
+  justify-content: center; /* Centramos todo */
+  gap: 20px; /* Espacio entre tarjetas */
+  margin-top: 30px;
+}
+
+#reseñas p {
+  width: 100%; /* El título ocupa todo el ancho para estar arriba */
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+blockquote {
+  background-color: #f9f9f9; /* Fondo gris muy clarito */
+  border-left: 4px solid var(--color-acento); /* Borde decorativo lateral */
+  padding: 20px;
+  width: 45%; /* Menos ancho para que quepan 2 por fila */
+  min-width: 250px; /* Ancho mínimo para móviles */
+  border-radius: 0 8px 8px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  font-style: italic;
+}
+
+/* 
+  ¡IMPORTANTE! Sobrescribimos el estilo del footer global 
+  para que no afecte al footer de la cita.
+*/
+blockquote footer {
+  background-color: transparent; /* Quitamos el fondo oscuro */
+  color: var(--color-texto); /* Volvemos al color de texto normal */
+  padding: 0;
+  margin-top: 10px;
+  text-align: right;
+  font-style: normal;
+  font-weight: bold;
+}
+
+/* 
+  UBICACIÓN (#ubicacion)
+  Centramos todo y ponemos el texto arriba del mapa.
+*/
+#ubicacion {
+  text-align: center;
+}
+
+address {
+  font-style: normal; /* Quitamos la cursiva por defecto de <address> */
+  display: flex; /* Usamos flexbox para apilar elementos */
+  flex-direction: column; /* Apilamos verticalmente: Texto arriba, mapa abajo */
+  align-items: center; /* Centramos horizontalmente */
+  gap: 20px; /* Espacio entre el texto y el mapa */
+  margin-top: 20px;
+  font-size: 1.1rem;
+}
+
+iframe {
+  max-width: 100%; /* Hacemos que el mapa sea responsive */
+  border: 4px solid var(--color-principal) !important; /* Marco estilo foto */
+  border-radius: 8px;
+}
+
+/* 
+  FOOTER (pie de página)
+  Rediseño completo para que se vea más profesional.
+*/
+footer {
+  background-color: #2c2c2c;
+  color: #e0e0e0;
+  text-align: center;
+  padding: 50px 20px;
+  margin-top: 60px;
+  border-top: 5px solid var(--color-acento); /* Detalle de color arriba */
+  position: relative;
+}
+
+footer header h4 {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+
+/* Enlaces del Footer */
+footer a {
+  color: var(--color-secundario);
+  text-decoration: none;
+  font-weight: bold;
+  transition: var(--transicion-suave);
+  display: inline-block; /* Necesario para transform */
+}
+
+footer a:hover {
+  color: var(--color-acento);
+  text-decoration: none;
+  transform: translateY(-3px); /* Flota hacia arriba */
+}
+
+/* Icono de volver arriba */
+footer a[href="#titulo-principal"] {
+  background-color: var(--color-acento);
+  color: white;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%; /* Círculo perfecto */
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+footer a[href="#titulo-principal"]:hover {
+  background-color: #fff;
+  color: var(--color-acento);
+  transform: translateY(-5px) rotate(360deg); /* Vuelta y subida */
+}
+
+/* Redes Sociales */
+footer p {
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+footer p a {
+  margin: 0 10px;
+  font-size: 1rem;
+  border-bottom: 1px dotted transparent;
+}
+
+footer p a:hover {
+  border-bottom-color: var(--color-acento);
+}
