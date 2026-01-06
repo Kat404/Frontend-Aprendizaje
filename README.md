@@ -57,11 +57,11 @@ git clone https://github.com/Kat404/Frontend-Aprendizaje.git
 
 Cuentas con los [`apuntes-de-html.html`](/apuntes-de-html.html) para poder comprobar alguna etiqueta o elemento, si tienes acceso a Internet también puedes buscar en documentación oficial de HTML para mayor información o en todo caso, consultar con tu IA favorita **únicamente para dudas o preguntas**, es importante que en tu proceso de aprendizaje uses la menos cantidad de IA posible, en el sentido de que *haga todo por ti* y tu no aprendas a hacer y a practicar por ti mismo.
 
-> Notas
+> #### 📝 Notas
 >
-> Al momento de practicar con los ejercicios o proyectos, **NO** consultes las soluciones antes de tiempo, consulta fuentes de información, documentación y foros.
+> - Al momento de practicar con los ejercicios o proyectos, **NO** consultes las soluciones antes de tiempo, consulta fuentes de información, documentación y foros.
 >
-> Si bien es cierto que se hace uso de *IA* para la creación de ejercicios y proyectos, todas las soluciones son hechas a mano por lo que podrían llegar a contener errores o no ser las mejores soluciones posibles.
+> - 🤖 Si bien es cierto que se hace uso de *IA* para la creación de ejercicios y proyectos, todas las soluciones son hechas a mano por lo que podrían llegar a contener errores o no ser las mejores soluciones posibles.
 
 ### 🔍 ¿Te gustaría aportar recursos y apuntes?
 
